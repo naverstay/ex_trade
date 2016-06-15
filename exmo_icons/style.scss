@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'exmo_icons';
-    src:    url('#{$icomoon-font-path}/exmo_icons.eot?pxkje4');
-    src:    url('#{$icomoon-font-path}/exmo_icons.eot?pxkje4#iefix') format('embedded-opentype'),
-        url('#{$icomoon-font-path}/exmo_icons.ttf?pxkje4') format('truetype'),
-        url('#{$icomoon-font-path}/exmo_icons.woff?pxkje4') format('woff'),
-        url('#{$icomoon-font-path}/exmo_icons.svg?pxkje4#exmo_icons') format('svg');
+    src:    url('#{$icomoon-font-path}/exmo_icons.eot?9a3tk5');
+    src:    url('#{$icomoon-font-path}/exmo_icons.eot?9a3tk5#iefix') format('embedded-opentype'),
+        url('#{$icomoon-font-path}/exmo_icons.ttf?9a3tk5') format('truetype'),
+        url('#{$icomoon-font-path}/exmo_icons.woff?9a3tk5') format('woff'),
+        url('#{$icomoon-font-path}/exmo_icons.svg?9a3tk5#exmo_icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -84,6 +84,11 @@
 .icon_mail_closed {
     &:before {
         content: $icon_mail_closed;
+    }
+}
+.icon_external-link {
+    &:before {
+        content: $icon_external-link;
     }
 }
 .icon_twitter {

@@ -241,7 +241,6 @@ a.menu_link {
 }
 
 .personal_m_link {
-  @include transition_all(color .3s, background .3s);
   display: block;
   position: relative;
   color: #1a1a1a;
@@ -297,7 +296,6 @@ a.menu_link {
     min-width: 165px;
     padding-right: 32px;
   }
-
 }
 
 .personal_m_text {

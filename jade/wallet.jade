@@ -7,13 +7,156 @@ html(lang='ru')
         .wrapper
             .rect_1024
             .base
-                a.adv_trading(href='#')
-                    span.adv_trading_icon
-                    .fz_14 Advanced
-                    .fz_15 TRADING
                 +header(1)
                 
                 div.main_content
+                    .section_inner
+                        ul.tab_switcher.text_center
+                            li.tab_item.active Balance
+                            li.tab_item Lending
+                            li.tab_item Investment
+    
+                        .form_row.text_center
+                            .form_cell.middle_mod
+                                .form_el
+                                    label.f_label Account value:
+                                .form_el.f_el_w200
+                                    .select_box
 
+                        .gl_table_w.wallet_table_w
+                            table.gl_table.wallet_table.table_v1
+                                thead
+                                    tr
+                                        th.col_1: span.t_t Currency
+                                        th.col_2: span.t_t Balance
+                                        th.col_3: span.t_t In Orders
+                                        th.col_4(colspan=2): span.t_t Deposit and Withdraw
+                                        
+                                tbody
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 1
+                                        td.col_4: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn(href='#') Withdraw
+                                            
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 0
+                                        td.col_4: span.t_t
+                                            a.t_control_btn(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Withdraw
+                                            
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 1
+                                        td.col_4: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn(href='#') Withdraw
+                                            
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 0
+                                        td.col_4: span.t_t
+                                            a.t_control_btn(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Withdraw
+                                            
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.305123489305123430512348930512343051234893051234
+                                        td.col_3: span.t_t 1
+                                        td.col_4: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn(href='#') Withdraw
+                                            
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 0
+                                        td.col_4: span.t_t
+                                            a.t_control_btn(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Withdraw
+                                                                                        
+                                    tr
+                                        td.col_1: span.t_t RUB
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t 0
+                                        td.col_4: span.t_t
+                                            a.t_control_btn(href='#') Deposit
+                                        td.col_5: span.t_t
+                                            a.t_control_btn.icon_chevron-down(href='#') Withdraw
+                        
+                        .table_caption_block
+                            h3.table_caption History
+                            ul.table_controls
+                                li.active: a.t_control_link(href='#') 10
+                                li: a.t_control_link(href='#') 25
+                                li: a.t_control_link(href='#') 50
+                                
+                        
+                        .gl_table_w.history_table_w
+                            table.gl_table.history_table.table_v1
+                                thead
+                                    tr
+                                        th.col_1: span.t_t Date/Time
+                                        th.col_2: span.t_t Amount
+                                        th.col_3: span.t_t Currency
+                                        th.col_4: span.t_t Status
+                                        th.col_5: span.t_t Information
+                                        
+                                tbody
+                                    tr
+                                        td.col_1: span.t_t 11.07 12:30
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t USD
+                                        td.col_4: span.t_t.clr_blue Deposit
+                                        td.col_5: span.t_t Payeer
+                                        
+                                    tr
+                                        td.col_1: span.t_t 11.07 12:30
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t USD
+                                        td.col_4: span.t_t.clr_blue Withdraw
+                                        td.col_5: span.t_t Payeer
+                                        
+                                    tr
+                                        td.col_1: span.t_t 11.07 12:30
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t USD
+                                        td.col_4: span.t_t 2 Confirmation
+                                        td.col_5: span.t_t Payeer
+                                        
+                                    tr
+                                        td.col_1: span.t_t 11.07 12:30
+                                        td.col_2: span.t_t 89.30512343051234305123430512343051234
+                                        td.col_3: span.t_t USD
+                                        td.col_4: span.t_t.clr_red Error
+                                        td.col_5: span.t_t Megafon                                        
+                                    tr
+                                        td.col_1: span.t_t 11.07 12:30
+                                        td.col_2: span.t_t 89.3051234
+                                        td.col_3: span.t_t USD
+                                        td.col_4: span.t_t
+                                            span.clr_blue Wire Transfer
+                                            span.question_icon.clr_blue i
+                                        td.col_5: span.t_t
+                                            span 18gCPMZ9JJkWhJWhfCLEVQdmcUe8Yy9QZW
+                                            a.icon_external-link(href='#')
+                                        
 
             +footer()
+
+            a.adv_trading(href='#')
+                span.adv_trading_icon
+                .fz_14 Advanced
+                .fz_15 TRADING

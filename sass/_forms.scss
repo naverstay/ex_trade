@@ -1,0 +1,34 @@
+.form_row {
+  line-height: 28px;
+}
+
+.form_cell {
+
+  &.middle_mod {
+    display: inline-block;
+    vertical-align: top;
+
+    .form_el {
+      display: inline-block;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+}
+
+.form_el {
+
+  &.f_el_w200 {
+    width: 200px;
+  }
+
+}
+
+.select_box {
+  
+}

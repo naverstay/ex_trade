@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'exmo_icons';
-    src:    url('fonts/exmo_icons.eot?pxkje4');
-    src:    url('fonts/exmo_icons.eot?pxkje4#iefix') format('embedded-opentype'),
-        url('fonts/exmo_icons.ttf?pxkje4') format('truetype'),
-        url('fonts/exmo_icons.woff?pxkje4') format('woff'),
-        url('fonts/exmo_icons.svg?pxkje4#exmo_icons') format('svg');
+    src:    url('fonts/exmo_icons.eot?9a3tk5');
+    src:    url('fonts/exmo_icons.eot?9a3tk5#iefix') format('embedded-opentype'),
+        url('fonts/exmo_icons.ttf?9a3tk5') format('truetype'),
+        url('fonts/exmo_icons.woff?9a3tk5') format('woff'),
+        url('fonts/exmo_icons.svg?9a3tk5#exmo_icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -59,6 +59,9 @@
 }
 .icon_mail_closed:before {
     content: "\e909";
+}
+.icon_external-link:before {
+    content: "\f08e";
 }
 .icon_twitter:before {
     content: "\f099";

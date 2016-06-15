@@ -1,62 +1,293 @@
-.user_balance_table_w {
-  margin-top: -2px;
-  min-width: 230px;
+
+.gl_table_w {
+  overflow: hidden;
+
+  &.user_balance_table_w {
+    margin-top: -2px;
+    min-width: 230px;
+  }
+
+  &.wallet_table_w {
+  }
+
+  .history_table_w {
+    border-radius: 2px 2px 0 0;
+  }
 }
 
-.user_balance_table {
+.gl_table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
-  text-align: left;
 
-  th {
-    background: #fff;
-    color: #818181;
-    font-weight: 400;
-    padding: 5px 2px 3px;
+  &.user_balance_table {
+    font-size: 12px;
+    text-align: left;
 
-    &.col_1 {
+    th {
+      background: #fff;
+      color: #818181;
+      font-weight: 400;
+      padding: 5px 2px 3px;
+
+      &.col_1 {
+
+      }
+
+      .col_3 {
+      }
+    }
+
+    td {
+      padding: 1px 2px 0;
+      color: #1a1a1a;
+      border-bottom: 1px solid #e9eaed;
+
+      &.col_2,
+      &.col_3 {
+        text-align: right;
+      }
+    }
+
+    tr {
+      &:first-child td {
+        padding-top: 4px;
+      }
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .col_1 {
+      padding-left: 10px;
+    }
+
+    .col_2 {
 
     }
 
     .col_3 {
-    }
-  }
-
-  td {
-    padding: 1px 2px 0;
-    color: #1a1a1a;
-    border-bottom: 1px solid #e9eaed;
-
-    &.col_2,
-    &.col_3 {
-      text-align: right;
+      padding-right: 10px;
     }
 
   }
 
-  tr {
-    &:first-child td {
-      padding-top: 4px;
+  &.table_v1 {
+    font-size: 12px;
+
+    th {
+      text-align: left;
+      color: #1a1a1a;
+      font-weight: 500;
+      background: #c9ced6;
+      padding: 8px;
     }
 
-    &:last-child {
-      td {
-        border-bottom: none;
+    td {
+      font-weight: 300;
+      color: #1a1a1a;
+      padding: 6px 8px 4px;
+      background: #fff;
+      border-bottom: 1px solid #e9eaed;
+    }
+  }
+
+  &.wallet_table {
+
+    th {
+
+      &.col_4 {
+        text-align: center;
+        padding-right: 125px;
       }
     }
+
+    td {
+
+      &.col_1 {
+        font-weight: 500;
+      }
+
+      &.col_3 {
+        color: #3f444b;
+      }
+
+      &.col_4 {
+        text-align: right;
+        padding-right: 57px;
+      }
+
+      &.col_5 {
+        padding-left: 27px;
+      }
+    }
+
+    .col_1 {
+      padding-left: 27px;
+      width: 180px;
+    }
+
+    .col_2 {
+      width: 157px;
+    }
+
+    .col_3 {
+      text-align: center;
+      width: 150px;
+    }
+
+    .col_4 {
+      width: 130px;
+    }
+
+    .col_5 {
+      padding-right: 27px;
+      width: 195px;
+    }
   }
 
-  .col_1 {
-    padding-left: 10px;
+  &.history_table {
+    font-size: 12px;
+
+    th {
+
+    }
+
+    td {
+
+      &.col_1 {
+
+      }
+
+      &.col_3 {
+
+      }
+
+      &.col_4 {
+
+      }
+
+      &.col_5 {
+        padding-left: 27px;
+      }
+    }
+
+    .col_1 {
+      padding-left: 27px;
+      width: 120px;
+    }
+
+    .col_2 {
+      width: 120px;
+    }
+
+    .col_3 {
+      text-align: center;
+      width: 150px;
+    }
+
+    .col_4 {
+      width: 130px;
+    }
+
+    .col_5 {
+      padding-right: 27px;
+      width: 195px;
+    }
+  }
+}
+
+.t_control_btn {
+  @extend .icon_before;
+  position: relative;
+  color: #2b8af1;
+  font-size: 13px;
+  text-decoration: none;
+  padding-right: 20px;
+
+  &.icon_chevron-down {
+
+    &:before {
+      position: absolute;
+      right: 2px;
+      height: 16px;
+      top: 50%;
+      margin-top: -8px;
+      font-size: 10px;
+      line-height: 16px;
+      color: inherit;
+    }
   }
 
-  .col_2 {
-
+  &:hover {
+    color: #8fbef2;
   }
 
-  .col_3 {
-    padding-right: 10px;
+  .active & {
+    color: #395784;
+  }
+}
+
+.t_t {
+  min-width: 100%;
+  display: block;
+  width: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table_caption_block {
+  @extend %clearfix;
+  line-height: 30px;
+
+  .table_caption {
+    float: left;
+  }
+
+  .table_controls {
+    float: right;
+  }
+
+}
+
+.table_caption {
+  font-size: 18px;
+  line-height: 30px;
+  color: #1a1a1a;
+  padding-left: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.table_controls {
+  li {
+    float: left;
+    padding-right: 8px;
+  }
+}
+
+.t_control_link {
+  display: block;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 300;
+  border-bottom: 2px solid transparent;
+  padding: 4px 7px;
+
+  &:hover {
+    color: #818181;
+  }
+
+  .active & {
+    font-weight: 400;
+    color: #1a1a1a;
+    cursor: default;
+    border-bottom-color: #4497f1;
   }
 
 }
