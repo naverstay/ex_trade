@@ -1,0 +1,184 @@
+mixin dev_head(page_title)
+    head
+        title=page_title
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+        link(rel='stylesheet', href='styles/main_global.css', media='all')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&subset=cyrillic,latin' rel='stylesheet' type='text/css')
+        //-link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+        script(src='js/jquery1.10.js')
+        script(src='js/script.js')
+
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+
+mixin header(active_menu)
+    div.header
+        .section_inner.clearfix
+            .logo_block
+                a.logo(href='#'): img(src='i/logo.png')
+                
+            ul.main_menu
+                li.menu_item(class = active_menu == 1 ? "active" : "")
+                    a.menu_link(href='#')
+                        span.link_text Wallet
+                li.menu_item(class = active_menu == 2 ? "active" : "")
+                    a.menu_link(href='#')
+                        span.link_text Buy/Sell
+                li.menu_item(class = active_menu == 3 ? "active" : "")
+                    a.menu_link(href='#')
+                        span.link_text Exchange
+                li.menu_item
+                    .menu_link
+                        span.link_text.drop_down_holder
+                            .account_estate 
+                                .fw_300 Account Value: 
+                                .fw_500 4321.9876 BTC
+                            div.drop_down_wrapper.drop_down_center.drop_down_white
+                                .personal_menu
+                                    .user_balance_table_w
+                                        table.user_balance_table
+                                            thead
+                                                tr
+                                                    th.col_1 Currency
+                                                    th.col_2 Balances
+                                                    th.col_3 In Orders
+                                            tbody  
+                                                tr
+                                                    td.col_1 RUR
+                                                    td.col_2 0123456789
+                                                    td.col_3 0
+                                                +loop_while(4)
+                                                    tr
+                                                        td.col_1 USD
+                                                        td.col_2 0
+                                                        td.col_3 0
+                                                tr
+                                                    td.col_1 DOGE
+                                                    td.col_2 0
+                                                    td.col_3 0123456789
+                                            
+                                            
+            ul.user_menu
+                li.user_m_item
+                    a.user_m_link(href='#')
+                        span.fw_300.mb Support
+                        span.question_icon ?
+                        
+                li.user_m_item
+                    .user_m_link.drop_down_holder
+                        span.fw_300.mb EN
+                        span.icon_chevron-down.menu_drop_icon.mb
+                        div.drop_down_wrapper.drop_down_center
+                            ul.personal_menu.text_center
+                                li.personal_m_item: a.personal_m_link(href='#') EN
+                                li.personal_m_item: a.personal_m_link(href='#') ES
+                                li.personal_m_item: a.personal_m_link(href='#') РУ
+                                    
+                li.user_m_item
+                    .user_m_link.drop_down_holder
+                        span.mb.user_avatar
+                            span.icon_profile
+                        span.icon_chevron-down.menu_drop_icon.mb
+                        div.drop_down_wrapper.drop_down_right
+                            ul.personal_menu.wide_menu
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Settings
+                                        span.personal_m_icon.icon_gear
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Messages
+                                        span.personal_m_icon.icon_mail_closed
+                                        span.personal_m_counter.fw_300 88
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Notifications
+                                        span.personal_m_icon.icon_alarm
+                                        span.personal_m_counter.fw_300 99
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Verification
+                                        span.personal_m_icon.icon_verified
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Referral program
+                                        span.personal_m_icon.icon_coins
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Cashback
+                                        span.personal_m_icon.icon_refresh
+                                            span.icon_refresh_currency $
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Export data
+                                        span.personal_m_icon.icon_cloud.export_icon
+                                li.personal_m_item
+                                    a.personal_m_link(href='#')
+                                        span.personal_m_text Logout
+                                        span.personal_m_icon.icon_log-out
+
+
+
+mixin footer()
+    .footer
+        .section_inner: .footer_container
+            ul.footer_menu
+                li.footer_m_col
+                    .footer_m_caption.fw_500.fz_16 Company
+                    .footer_m_item: a.footer_m_link(href='#') About Us
+                    .footer_m_item: a.footer_m_link(href='#') Contacts
+                    .footer_m_item: a.footer_m_link(href='#') Fees
+                    .footer_m_item: a.footer_m_link(href='#') News
+                    
+                    
+                li.footer_m_col
+                    .footer_m_caption.fw_500.fz_16 Products
+                    .footer_m_item: a.footer_m_link(href='#') Wallet
+                    .footer_m_item: a.footer_m_link(href='#') Trade
+                    .footer_m_item: a.footer_m_link(href='#') Exchange
+                    .footer_m_item: a.footer_m_link(href='#') Merchant
+                    
+                    
+                li.footer_m_col
+                    .footer_m_caption.fw_500.fz_16 Legal Documents
+                    .footer_m_item: a.footer_m_link(href='#') Terms and Conditions
+                    .footer_m_item: a.footer_m_link(href='#') AML
+                    .footer_m_item: a.footer_m_link(href='#') Privacy Policy
+                    
+                li.footer_m_col
+                    .footer_m_caption.fw_500.fz_16 Learn More
+                    .footer_m_item: a.footer_m_link(href='#') Support
+                    .footer_m_item: a.footer_m_link(href='#') FAQ
+                    .footer_m_item: a.footer_m_link(href='#') Affiliate Program
+                                   
+                li.footer_m_col
+                    .footer_m_caption.fw_500.fz_16 For Developers
+                    .footer_m_item: a.footer_m_link(href='#') Trade API
+                    .footer_m_item: a.footer_m_link(href='#') Public API
+                    .footer_m_item: a.footer_m_link(href='#') Push API
+               
+            .footer_info
+                ul.footer_soc
+                    li: a.footer_s_link.icon_facebook(href='#')
+                    li: a.footer_s_link.icon_twitter(href='#')
+                    li: a.footer_s_link.icon_vk-alternitive(href='#')
+                    
+                .bfm_block
+                    .icon_bfm
+                    span Bitcoin Foundation <br>Member
+                    
+            .copyright.fw_300.text_center
+                .fz_14
+                    span Copyright &copy; 
+                    span.fw_500 EXMO FINANCE LLP 
+                    span  2013  - 2015
+                .fz_12 All Rights Reserved

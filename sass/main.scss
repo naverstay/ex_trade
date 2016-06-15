@@ -1,0 +1,103 @@
+$gl_green: #2dcda1;
+$gl_blue: #00b1ff;
+$gl_blue_v1: #24a6df;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 14px/1.2 'Roboto', sans-serif;
+  color: $default_t_color;
+  background: #e9eaed;
+}
+
+.hide {
+  display: none !important;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  min-width: 1000px;
+  padding: 83px 0 0;
+}
+
+.base {
+  padding-bottom: 330px;
+}
+
+.section_inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mb {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+// **********  text
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}
+
+.fw_300 {
+  font-weight: 300;
+}
+
+.fw_500 {
+  font-weight: 500;
+}
+
+.fz_12 {
+  font-size: 12px;
+}
+
+.fz_14 {
+  font-size: 14px;
+}
+
+.fz_15 {
+  font-size: 15px;
+}
+
+.fz_16 {
+  font-size: 16px;
+}
+

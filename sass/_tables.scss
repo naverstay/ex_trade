@@ -1,0 +1,62 @@
+.user_balance_table_w {
+  margin-top: -2px;
+  min-width: 230px;
+}
+
+.user_balance_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+
+  th {
+    background: #fff;
+    color: #818181;
+    font-weight: 400;
+    padding: 5px 2px 3px;
+
+    &.col_1 {
+
+    }
+
+    .col_3 {
+    }
+  }
+
+  td {
+    padding: 1px 2px 0;
+    color: #1a1a1a;
+    border-bottom: 1px solid #e9eaed;
+
+    &.col_2,
+    &.col_3 {
+      text-align: right;
+    }
+
+  }
+
+  tr {
+    &:first-child td {
+      padding-top: 4px;
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .col_1 {
+    padding-left: 10px;
+  }
+
+  .col_2 {
+
+  }
+
+  .col_3 {
+    padding-right: 10px;
+  }
+
+}
