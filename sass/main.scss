@@ -114,6 +114,72 @@ a {
   vertical-align: middle;
 }
 
+.pairs_holder {
+  height: 60px;
+}
+
+.main_charts {
+  @extend %clearfix;
+  padding-top: 14px;
+}
+
+.chart_holder {
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &.chart_v1 {
+    height: 290px;
+  }
+
+}
+
+.chart_w {
+  float: left;
+  position: relative;
+  padding-top: 33px;
+
+  &.chart_s_602 {
+    width: 602px;
+  }
+
+  &.chart_s_370 {
+    width: 370px;
+  }
+
+  + .chart_w {
+    padding-left: 30px;
+  }
+
+}
+
+.chart_controls {
+  @extend %clearfix;
+  line-height: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .chart_caption {
+    float: left;
+  }
+
+  .filter_options {
+    float: right;
+
+    li {
+      padding-right: 10px;
+    }
+  }
+}
+
+.chart_caption {
+  font-size: 13px;
+  padding-left: 11px;
+  letter-spacing: .2px;
+}
+
 // **********  text
 
 .text_center {
@@ -162,4 +228,8 @@ a {
 
 .clr_red {
   color: #ed325b;
+}
+
+.clr_gray {
+  color: #818181;
 }

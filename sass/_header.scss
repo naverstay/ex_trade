@@ -76,9 +76,25 @@ a.user_m_link {
   height: 17px;
   margin-left: 6px;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 15px;
   border: 1px solid rgba(254, 253, 244, .5);
+
+  &.question_icon_blue {
+    color: #3f95f2;
+    border-color: #3f95f2;
+
+    &:hover {
+      color: #2b8af1;
+      border-color: #2b8af1;
+    }
+
+    &.opened,
+    &:active {
+      color: #405d88;
+      border-color: #405d88;
+    }
+  }
 }
 
 .user_avatar {
@@ -221,7 +237,7 @@ a.menu_link {
 
   &.drop_down_white {
     padding-top: 11px;
-    
+
     &:before {
       top: 1px;
       border-bottom-color: #fff;
@@ -337,6 +353,8 @@ a.menu_link {
 }
 
 .export_icon {
+  @extend .icon_before;
+
   &:after {
     content: $icon_arrow-right;
     position: absolute;

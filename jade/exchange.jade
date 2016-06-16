@@ -1,0 +1,36 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('exmo exchange')
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                +header(3)
+                
+                div.main_content
+                    .section_inner
+                        .pairs_holder
+                            | пары
+                        
+                        .main_charts
+                            .chart_w.chart_s_602
+                                .chart_controls
+                                    .chart_caption 
+                                        span.fw_500 00:19:13 
+                                        span.fw_300.clr_gray  (UTC)
+                                    ul.filter_options
+                                        li: a.t_control_link(href='#') 1y
+                                        li.active: a.t_control_link(href='#') 6m
+                                        li: a.t_control_link(href='#') 1m
+                                        li: a.t_control_link(href='#') 7d
+                                        li: a.t_control_link(href='#') 1d
+                                .chart_holder.chart_v1
+                                    
+                            .chart_w.chart_s_370
+                                .chart_holder.chart_v1
+                                    
+
+
+            +footer()

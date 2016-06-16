@@ -92,7 +92,8 @@
     td {
       font-weight: 300;
       color: #1a1a1a;
-      padding: 6px 8px 4px;
+      line-height: 17px;
+      padding: 4px 8px 3px;
       background: #fff;
       border-bottom: 1px solid #e9eaed;
     }
@@ -182,7 +183,6 @@
       }
 
       &.col_5 {
-        padding-left: 27px;
       }
     }
 
@@ -194,24 +194,24 @@
 
     .col_1 {
       padding-left: 27px;
-      width: 116px;
+      width: 113px;
     }
 
     .col_2 {
-      width: 116px;
+      width: 113px;
     }
 
     .col_3 {
-      width: 110px;
+      width: 105px;
     }
 
     .col_4 {
-      width: 212px;
+      width: 210px;
     }
 
     .col_5 {
       padding-right: 27px;
-      width: 308px;
+      width: 317px;
     }
   }
 }
@@ -265,7 +265,7 @@
     float: left;
   }
 
-  .table_controls {
+  .filter_options {
     float: right;
   }
 
@@ -279,7 +279,7 @@
   font-weight: 400;
 }
 
-.table_controls {
+.filter_options {
   li {
     float: left;
     padding-right: 8px;
@@ -317,6 +317,7 @@
   text-decoration: none;
   color: #3f444b;
   font-weight: 500;
+  cursor: pointer;
 
   &:before {
     position: absolute;
@@ -328,12 +329,22 @@
     color: #2b8af1;
   }
 
+  &:hover {
+    color: #515962;
+  }
+  
   &.t_pag_prev {
     @extend .icon_chevron-left;
     padding-left: 21px;
 
     &:before {
       left: -2px;
+    }
+    
+    &:hover {
+      &:before {
+        left: -4px;
+      }
     }
   }
 
@@ -343,6 +354,12 @@
 
     &:before {
       right: -4px;
+    }
+
+    &:hover {
+      &:before {
+        right: -6px;
+      }
     }
   }
 }

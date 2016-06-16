@@ -12,6 +12,7 @@
 }
 
 [class^="icon_"], [class*=" icon_"] {
+  &:after,
   &:before {
 
     /* use !important to prevent issues with browser extensions that change fonts */
