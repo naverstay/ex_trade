@@ -30,5 +30,100 @@
 }
 
 .select_box {
-  
+  position: relative;
+  text-align: left;
+}
+
+.select_drop_down {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+
+  .opened & {
+    display: block;
+    z-index: 2;
+  }
+
+  .select_box_v1 & {
+    min-width: 100%;
+    background: #c9ced6;
+    border-radius: 0 0 3px 3px;
+  }
+
+}
+
+.select_val {
+  position: relative;
+
+  .select_box_v1 & {
+    @extend .icon_before;
+    @extend .icon_chevron-down;
+    border-radius: 3px;
+    padding: 0 22px;
+    height: 30px;
+    background: #c9ced6;
+    color: #000;
+    font-weight: 300;
+
+    &:before {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      margin-top: -10px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 10px;
+      color: #838383;
+    }
+
+    &:hover {
+
+      &:before {
+        color: #1b1b1b;
+      }
+    }
+
+  }
+
+  .opened.select_box_v1 & {
+    @extend .icon_chevron-up;
+    border-radius: 3px 3px 0 0;
+    color: #818181;
+
+    &:before {
+      color: #818181;
+    }
+  }
+
+  .disabled.select_box_v1 & {
+    @extend %no-user-select;
+    background: #d9dce1;
+    color: #adaeb1;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:before {
+      color: #adaeb1;
+    }
+  }
+}
+
+.select_item {
+  cursor: pointer;
+
+  .select_box_v1 & {
+    padding: 0 22px;
+    height: 30px;
+
+    &:hover {
+      background: #2a89ef;
+      color: #fff;
+    }
+
+  }
+}
+
+.currency_label {
+  padding-left: 8px;
 }

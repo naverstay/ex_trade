@@ -93,6 +93,27 @@ a {
   }
 }
 
+.account_value_switcher {
+  padding: 32px 0 48px;
+}
+
+.table_holder {
+  border-top: 1px solid #ccc;
+  padding-top: 12px;
+  padding-bottom: 100px;
+}
+
+.external_link {
+  @extend .icon_before;
+  @extend .icon_external-link;
+  text-decoration: none;
+  font-size: 16px;
+  color: #2b8af1;
+  margin-left: 9px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 // **********  text
 
 .text_center {

@@ -13,6 +13,10 @@
   .history_table_w {
     border-radius: 2px 2px 0 0;
   }
+
+  &.table_w_v1 {
+    padding-bottom: 52px;
+  }
 }
 
 .gl_table {
@@ -124,6 +128,12 @@
       }
     }
 
+    tr:last-child {
+      td {
+        padding-bottom: 9px;
+      }
+    }
+
     .col_1 {
       padding-left: 27px;
       width: 180px;
@@ -162,7 +172,9 @@
       }
 
       &.col_3 {
-
+        span {
+          padding-left: 18px;
+        }
       }
 
       &.col_4 {
@@ -174,27 +186,32 @@
       }
     }
 
+    tr:last-child {
+      td {
+        padding-bottom: 9px;
+      }
+    }
+
     .col_1 {
       padding-left: 27px;
-      width: 120px;
+      width: 116px;
     }
 
     .col_2 {
-      width: 120px;
+      width: 116px;
     }
 
     .col_3 {
-      text-align: center;
-      width: 150px;
+      width: 110px;
     }
 
     .col_4 {
-      width: 130px;
+      width: 212px;
     }
 
     .col_5 {
       padding-right: 27px;
-      width: 195px;
+      width: 308px;
     }
   }
 }
@@ -242,6 +259,7 @@
 .table_caption_block {
   @extend %clearfix;
   line-height: 30px;
+  padding: 17px 0 12px;
 
   .table_caption {
     float: left;
@@ -259,7 +277,6 @@
   color: #1a1a1a;
   padding-left: 20px;
   font-weight: 400;
-  margin-bottom: 12px;
 }
 
 .table_controls {
@@ -290,4 +307,42 @@
     border-bottom-color: #4497f1;
   }
 
+}
+
+.t_pagination_link {
+  @extend .icon_before;
+  position: relative;
+  float: left;
+  margin-left: 22px;
+  text-decoration: none;
+  color: #3f444b;
+  font-weight: 500;
+
+  &:before {
+    position: absolute;
+    height: 20px;
+    margin-top: -10px;
+    line-height: 20px;
+    top: 50%;
+    font-size: 20px;
+    color: #2b8af1;
+  }
+
+  &.t_pag_prev {
+    @extend .icon_chevron-left;
+    padding-left: 21px;
+
+    &:before {
+      left: -2px;
+    }
+  }
+
+  &.t_pag_next {
+    @extend .icon_chevron-right;
+    padding-right: 21px;
+
+    &:before {
+      right: -4px;
+    }
+  }
 }

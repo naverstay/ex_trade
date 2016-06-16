@@ -8,6 +8,14 @@
   visibility: hidden;
 }
 
+.disabled.select_box_v1 .select_val {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -197,7 +205,7 @@ textarea:focus::-moz-placeholder {
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon_"], [class*=" icon_"] {
+[class^="icon_"]:before, [class*=" icon_"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -259,7 +267,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_external-link:before {
+.icon_external-link:before, .external_link:before {
   content: "";
 }
 
@@ -295,23 +303,23 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_chevron-down:before, .account_estate:before {
+.icon_chevron-down:before, .account_estate:before, .select_box_v1 .select_val:before {
   content: "";
 }
 
-.icon_chevron-up:before {
+.icon_chevron-up:before, .opened.select_box_v1 .select_val:before {
   content: "";
 }
 
-.icon_chevron-right:before {
+.icon_chevron-right:before, .t_pagination_link.t_pag_next:before {
   content: "";
 }
 
-.icon_chevron-left:before {
+.icon_chevron-left:before, .t_pagination_link.t_pag_prev:before {
   content: "";
 }
 
-.icon_before:after, .account_estate:after, .log_out_icon:after, .adv_trading_icon:after, .t_control_btn:after, .icon_before:before, .account_estate:before, .log_out_icon:before, .adv_trading_icon:before, .t_control_btn:before {
+.icon_before:after, .external_link:after, .account_estate:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .account_estate:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -418,6 +426,25 @@ a {
   font-weight: 400;
   color: #1a1a1a;
   border-bottom-color: #2b8af1;
+}
+
+.account_value_switcher {
+  padding: 32px 0 48px;
+}
+
+.table_holder {
+  border-top: 1px solid #ccc;
+  padding-top: 12px;
+  padding-bottom: 100px;
+}
+
+.external_link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #2b8af1;
+  margin-left: 9px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .text_center {
@@ -844,6 +871,84 @@ a.menu_link:hover {
   width: 200px;
 }
 
+.select_box {
+  position: relative;
+  text-align: left;
+}
+
+.select_drop_down {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+.opened .select_drop_down {
+  display: block;
+  z-index: 2;
+}
+.select_box_v1 .select_drop_down {
+  min-width: 100%;
+  background: #c9ced6;
+  border-radius: 0 0 3px 3px;
+}
+
+.select_val {
+  position: relative;
+}
+.select_box_v1 .select_val {
+  border-radius: 3px;
+  padding: 0 22px;
+  height: 30px;
+  background: #c9ced6;
+  color: #000;
+  font-weight: 300;
+}
+.select_box_v1 .select_val:before {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -10px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  color: #838383;
+}
+.select_box_v1 .select_val:hover:before {
+  color: #1b1b1b;
+}
+.opened.select_box_v1 .select_val {
+  border-radius: 3px 3px 0 0;
+  color: #818181;
+}
+.opened.select_box_v1 .select_val:before {
+  color: #818181;
+}
+.disabled.select_box_v1 .select_val {
+  background: #d9dce1;
+  color: #adaeb1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.disabled.select_box_v1 .select_val:before {
+  color: #adaeb1;
+}
+
+.select_item {
+  cursor: pointer;
+}
+.select_box_v1 .select_item {
+  padding: 0 22px;
+  height: 30px;
+}
+.select_box_v1 .select_item:hover {
+  background: #2a89ef;
+  color: #fff;
+}
+
+.currency_label {
+  padding-left: 8px;
+}
+
 .btn_v1 {
   height: 36px;
 }
@@ -866,6 +971,9 @@ a.menu_link:hover {
 }
 .gl_table_w .history_table_w {
   border-radius: 2px 2px 0 0;
+}
+.gl_table_w.table_w_v1 {
+  padding-bottom: 52px;
 }
 
 .gl_table {
@@ -936,6 +1044,9 @@ a.menu_link:hover {
 .gl_table.wallet_table td.col_5 {
   padding-left: 27px;
 }
+.gl_table.wallet_table tr:last-child td {
+  padding-bottom: 9px;
+}
 .gl_table.wallet_table .col_1 {
   padding-left: 27px;
   width: 180px;
@@ -957,26 +1068,31 @@ a.menu_link:hover {
 .gl_table.history_table {
   font-size: 12px;
 }
+.gl_table.history_table td.col_3 span {
+  padding-left: 18px;
+}
 .gl_table.history_table td.col_5 {
   padding-left: 27px;
 }
+.gl_table.history_table tr:last-child td {
+  padding-bottom: 9px;
+}
 .gl_table.history_table .col_1 {
   padding-left: 27px;
-  width: 120px;
+  width: 116px;
 }
 .gl_table.history_table .col_2 {
-  width: 120px;
+  width: 116px;
 }
 .gl_table.history_table .col_3 {
-  text-align: center;
-  width: 150px;
+  width: 110px;
 }
 .gl_table.history_table .col_4 {
-  width: 130px;
+  width: 212px;
 }
 .gl_table.history_table .col_5 {
   padding-right: 27px;
-  width: 195px;
+  width: 308px;
 }
 
 .t_control_btn {
@@ -986,7 +1102,7 @@ a.menu_link:hover {
   text-decoration: none;
   padding-right: 20px;
 }
-.t_control_btn.icon_chevron-down:before, .t_control_btn.account_estate:before {
+.t_control_btn.icon_chevron-down:before, .t_control_btn.account_estate:before, .select_box_v1 .t_control_btn.select_val:before {
   position: absolute;
   right: 2px;
   height: 16px;
@@ -1014,6 +1130,7 @@ a.menu_link:hover {
 
 .table_caption_block {
   line-height: 30px;
+  padding: 17px 0 12px;
 }
 .table_caption_block .table_caption {
   float: left;
@@ -1028,7 +1145,6 @@ a.menu_link:hover {
   color: #1a1a1a;
   padding-left: 20px;
   font-weight: 400;
-  margin-bottom: 12px;
 }
 
 .table_controls li {
@@ -1054,6 +1170,36 @@ a.menu_link:hover {
   color: #1a1a1a;
   cursor: default;
   border-bottom-color: #4497f1;
+}
+
+.t_pagination_link {
+  position: relative;
+  float: left;
+  margin-left: 22px;
+  text-decoration: none;
+  color: #3f444b;
+  font-weight: 500;
+}
+.t_pagination_link:before {
+  position: absolute;
+  height: 20px;
+  margin-top: -10px;
+  line-height: 20px;
+  top: 50%;
+  font-size: 20px;
+  color: #2b8af1;
+}
+.t_pagination_link.t_pag_prev {
+  padding-left: 21px;
+}
+.t_pagination_link.t_pag_prev:before {
+  left: -2px;
+}
+.t_pagination_link.t_pag_next {
+  padding-right: 21px;
+}
+.t_pagination_link.t_pag_next:before {
+  right: -4px;
 }
 
 .footer {

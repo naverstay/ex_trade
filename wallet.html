@@ -117,17 +117,27 @@
               <li class="tab_item">Lending</li>
               <li class="tab_item">Investment</li>
             </ul>
-            <div class="form_row text_center">
-              <div class="form_cell middle_mod">
-                <div class="form_el">
-                  <label class="f_label">Account value:</label>
-                </div>
-                <div class="form_el f_el_w200">
-                  <div class="select_box"></div>
+            <div class="account_value_switcher">
+              <div class="form_row text_center">
+                <div class="form_cell middle_mod">
+                  <div class="form_el">
+                    <label class="f_label">Account value:</label>
+                  </div>
+                  <div class="form_el f_el_w200">
+                    <div class="select_box selectBox select_box_v1 disabled_">
+                      <div class="selectVal select_val"><span>1.23445679</span><span class="currency_label">LTC</span></div>
+                      <ul class="selectDropDown select_drop_down">
+                        <li class="selectItem select_item"><span>1.23445679</span><span class="currency_label">LTC</span></li>
+                        <li class="selectItem select_item"><span>1.23445679</span><span class="currency_label">USD</span></li>
+                        <li class="selectItem select_item"><span>1.23445679</span><span class="currency_label">LTC</span></li>
+                        <li class="selectItem select_item"><span>1.23445679</span><span class="currency_label">USD</span></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="gl_table_w wallet_table_w">
+            <div class="gl_table_w wallet_table_w table_w_v1">
               <table class="gl_table wallet_table table_v1">
                 <thead>
                   <tr>
@@ -190,63 +200,103 @@
                 </tbody>
               </table>
             </div>
-            <div class="table_caption_block">
-              <h3 class="table_caption">History</h3>
-              <ul class="table_controls">
-                <li class="active"><a href="#" class="t_control_link">10</a></li>
-                <li><a href="#" class="t_control_link">25</a></li>
-                <li><a href="#" class="t_control_link">50</a></li>
-              </ul>
-            </div>
-            <div class="gl_table_w history_table_w">
-              <table class="gl_table history_table table_v1">
-                <thead>
-                  <tr>
-                    <th class="col_1"><span class="t_t">Date/Time</span></th>
-                    <th class="col_2"><span class="t_t">Amount</span></th>
-                    <th class="col_3"><span class="t_t">Currency</span></th>
-                    <th class="col_4"><span class="t_t">Status</span></th>
-                    <th class="col_5"><span class="t_t">Information</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="col_1"><span class="t_t">11.07 12:30</span></td>
-                    <td class="col_2"><span class="t_t">89.3051234</span></td>
-                    <td class="col_3"><span class="t_t">USD</span></td>
-                    <td class="col_4"><span class="t_t clr_blue">Deposit</span></td>
-                    <td class="col_5"><span class="t_t">Payeer</span></td>
-                  </tr>
-                  <tr>
-                    <td class="col_1"><span class="t_t">11.07 12:30</span></td>
-                    <td class="col_2"><span class="t_t">89.3051234</span></td>
-                    <td class="col_3"><span class="t_t">USD</span></td>
-                    <td class="col_4"><span class="t_t clr_blue">Withdraw</span></td>
-                    <td class="col_5"><span class="t_t">Payeer</span></td>
-                  </tr>
-                  <tr>
-                    <td class="col_1"><span class="t_t">11.07 12:30</span></td>
-                    <td class="col_2"><span class="t_t">89.3051234</span></td>
-                    <td class="col_3"><span class="t_t">USD</span></td>
-                    <td class="col_4"><span class="t_t">2 Confirmation</span></td>
-                    <td class="col_5"><span class="t_t">Payeer</span></td>
-                  </tr>
-                  <tr>
-                    <td class="col_1"><span class="t_t">11.07 12:30</span></td>
-                    <td class="col_2"><span class="t_t">89.30512343051234305123430512343051234</span></td>
-                    <td class="col_3"><span class="t_t">USD</span></td>
-                    <td class="col_4"><span class="t_t clr_red">Error</span></td>
-                    <td class="col_5"><span class="t_t">Megafon                                        </span></td>
-                  </tr>
-                  <tr>
-                    <td class="col_1"><span class="t_t">11.07 12:30</span></td>
-                    <td class="col_2"><span class="t_t">89.3051234</span></td>
-                    <td class="col_3"><span class="t_t">USD</span></td>
-                    <td class="col_4"><span class="t_t"><span class="clr_blue">Wire Transfer</span><span class="question_icon clr_blue">i</span></span></td>
-                    <td class="col_5"><span class="t_t"><span>18gCPMZ9JJkWhJWhfCLEVQdmcUe8Yy9QZW</span><a href="#" class="icon_external-link"></a></span></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="table_holder">
+              <div class="table_caption_block">
+                <h3 class="table_caption">History</h3>
+                <ul class="table_controls">
+                  <li class="active"><a href="#" class="t_control_link">10</a></li>
+                  <li><a href="#" class="t_control_link">25</a></li>
+                  <li><a href="#" class="t_control_link">50</a></li>
+                </ul>
+              </div>
+              <div class="gl_table_w history_table_w">
+                <table class="gl_table history_table table_v1">
+                  <thead>
+                    <tr>
+                      <th class="col_1"><span class="t_t">Date/Time</span></th>
+                      <th class="col_2"><span class="t_t">Amount</span></th>
+                      <th class="col_3"><span class="t_t">Currency</span></th>
+                      <th class="col_4"><span class="t_t">Status</span></th>
+                      <th class="col_5"><span class="t_t">Information</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_blue">Deposit</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_blue">Withdraw</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">2 Confirmation</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.30512343051234305123430512343051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_red">Error</span></td>
+                      <td class="col_5"><span class="t_t">Megafon                                        </span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t"><span class="clr_blue">Wire Transfer</span><span class="question_icon clr_blue">i</span></span></td>
+                      <td class="col_5"><span class="t_t"><span>18gCPMZ9JJkWhJWhfCLEVQdmcUe8Yy9QZW</span><a href="#" class="external_link"></a></span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_blue">Deposit</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_blue">Withdraw</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">2 Confirmation</span></td>
+                      <td class="col_5"><span class="t_t">Payeer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.30512343051234305123430512343051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t clr_red">Error</span></td>
+                      <td class="col_5"><span class="t_t">Megafon                                        </span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">89.3051234</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t"><span class="clr_blue">Wire Transfer</span><span class="question_icon clr_blue">i</span></span></td>
+                      <td class="col_5"><span class="t_t"><span>18gCPMZ9JJkWhJWhfCLEVQdmcUe8Yy9QZW</span><a href="#" class="external_link"></a></span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table_caption_block">
+                <div class="table_controls"><a href="#" class="t_pagination_link t_pag_prev">Prev</a><a href="#" class="t_pagination_link t_pag_next">Next</a></div>
+              </div>
             </div>
           </div>
         </div>
