@@ -206,11 +206,11 @@
         height: 15px;
         top: 50%;
         margin-top: -8px;
-        line-height: 15px;
         font-size: 11px;
+        line-height: 13px;
         color: #fff;
         text-align: center;
-        background: #2b8af1;
+        border: 1px solid #2b8af1;
         border-radius: 2px;
       }
     }
@@ -218,6 +218,7 @@
     .hidden_inp:checked ~ .check_text {
       &:before {
         content: $icon_checkmark;
+        background: #2b8af1;
       }
     }
   }

@@ -1305,15 +1305,16 @@ a.menu_link:hover {
   height: 15px;
   top: 50%;
   margin-top: -8px;
-  line-height: 15px;
   font-size: 11px;
+  line-height: 13px;
   color: #fff;
   text-align: center;
-  background: #2b8af1;
+  border: 1px solid #2b8af1;
   border-radius: 2px;
 }
 .check_emul.check_v1 .hidden_inp:checked ~ .check_text:before {
   content: "";
+  background: #2b8af1;
 }
 
 .gl_link.rm_link {
