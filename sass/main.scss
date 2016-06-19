@@ -65,8 +65,14 @@ a {
   padding-top: 35px;
 }
 
-.tab_switcher {
+.account_value_tabs {
   padding: 30px 0;
+}
+
+.tab_switcher {
+  .chart_controls & {
+    margin-top: -10px;
+  }
 }
 
 .tab_item {
@@ -74,8 +80,7 @@ a {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
-  margin: 0 12px;
-  padding: 5px 24px;
+  padding: 5px 18px;
   border-bottom: 2px solid transparent;
   color: #1a1a1a;
   font-size: 18px;
@@ -90,6 +95,11 @@ a {
     font-weight: 400;
     color: #1a1a1a;
     border-bottom-color: #2b8af1;
+  }
+
+  .account_value_tabs & {
+    padding: 5px 24px;
+    margin: 0 12px;
   }
 }
 
@@ -115,7 +125,8 @@ a {
 }
 
 .pairs_holder {
-  height: 60px;
+  min-height: 60px;
+  padding-bottom: 7px;
 }
 
 .main_charts {
@@ -131,26 +142,33 @@ a {
   &.chart_v1 {
     height: 290px;
   }
-
 }
 
 .chart_w {
-  float: left;
   position: relative;
   padding-top: 33px;
+}
 
-  &.chart_s_602 {
-    width: 602px;
+.row {
+  @extend %clearfix;
+}
+
+.col {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+
+  &.col_s_600 {
+    width: 600px;
   }
 
-  &.chart_s_370 {
-    width: 370px;
+  &.col_s_400 {
+    width: 400px;
   }
 
-  + .chart_w {
+  + .col {
     padding-left: 30px;
   }
-
 }
 
 .chart_controls {
@@ -178,6 +196,133 @@ a {
   font-size: 13px;
   padding-left: 11px;
   letter-spacing: .2px;
+}
+
+.pairs_list {
+  @extend %clearfix;
+  margin-left: -4px;
+
+  > li {
+    float: left;
+    padding-left: 4px;
+    margin-bottom: 11px;
+    width: 1% *100 / 14;
+  }
+}
+
+.pair_item {
+  border-radius: 3px;
+  overflow: hidden;
+  line-height: 15px;
+  text-align: center;
+}
+
+.pair_spiner {
+  height: 42px;
+  position: relative;
+
+  span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -3px;
+    border-radius: 100%;
+    background: #c9ced6;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background: #c9ced6;
+    }
+
+    &:before {
+      right: 100%;
+      margin-right: 2px;
+    }
+
+    &:after {
+      left: 100%;
+      margin-left: 2px;
+    }
+  }
+}
+
+.pair_name {
+  height: 21px;
+  background: #c9ced6;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.pair_val {
+  background: #fff;
+  font-size: 11px;
+  height: 21px;
+  padding: 3px;
+}
+
+.order_forms {
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 365px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    border-left: 1px solid #e9eaed;
+  }
+}
+
+.form_col {
+  float: left;
+  width: 50%;
+  padding: 15px 0 50px 16px;
+  height: 100%;
+  position: relative;
+}
+
+.chat_block {
+  position: relative;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.instant_group {
+  @include transition_all(background .3s, border-color .3s);
+  padding: 1px 1px 1px 14px;
+  margin: -1px 0 27px -16px;
+  border-left: 2px solid transparent;
+
+  &.active,
+  &:hover {
+    border-left-color: #2b8af1;
+    background: #e9eaed;
+  }
+}
+
+.glass_holder {
+  @extend %clearfix;
+  margin-left: -20px;
+}
+
+.glass_unit {
+  float: left;
+  width: 50%;
+  padding-left: 20px;
 }
 
 // **********  text
@@ -210,6 +355,10 @@ a {
   font-size: 12px;
 }
 
+.fz_13 {
+  font-size: 13px;
+}
+
 .fz_14 {
   font-size: 14px;
 }
@@ -233,3 +382,9 @@ a {
 .clr_gray {
   color: #818181;
 }
+
+.clr_gray_2 {
+  color: #3f444b;
+}
+
+

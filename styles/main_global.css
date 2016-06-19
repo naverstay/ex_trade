@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_charts:after, .chart_controls:after, .table_caption_block:after, .footer_info:after {
+.main_charts:after, .row:after, .chart_controls:after, .pairs_list:after, .glass_holder:after, .form_row:after, .table_caption_block:after, .footer_info:after {
   position: static;
   display: block;
   height: 0;
@@ -200,8 +200,8 @@ textarea:focus::-moz-placeholder {
 /*-----------------------------form elements###*/
 @font-face {
   font-family: 'exmo_icons';
-  src: url("../fonts/exmo_icons.eot?9a3tk5");
-  src: url("../fonts/exmo_icons.eot?9a3tk5#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?9a3tk5") format("truetype"), url("../fonts/exmo_icons.woff?9a3tk5") format("woff"), url("../fonts/exmo_icons.svg?9a3tk5#exmo_icons") format("svg");
+  src: url("../fonts/exmo_icons.eot?qch4h0");
+  src: url("../fonts/exmo_icons.eot?qch4h0#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?qch4h0") format("truetype"), url("../fonts/exmo_icons.woff?qch4h0") format("woff"), url("../fonts/exmo_icons.svg?qch4h0#exmo_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -239,6 +239,10 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
+.icon_close:before {
+  content: "";
+}
+
 .icon_trending_up:before {
   content: "";
 }
@@ -265,6 +269,10 @@ textarea:focus::-moz-placeholder {
 
 .icon_mail_closed:before {
   content: "";
+}
+
+.icon_remove:before {
+  content: "";
 }
 
 .icon_external-link:before, .external_link:before {
@@ -295,6 +303,14 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
+.icon_lock-open:before {
+  content: "";
+}
+
+.icon_lock:before {
+  content: "";
+}
+
 .icon_vk-alternitive:before {
   content: "";
 }
@@ -319,7 +335,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_before:after, .external_link:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .t_control_btn:before, .t_pagination_link:before {
+.icon_before:after, .external_link:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.rm_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.rm_link:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -400,8 +416,12 @@ a {
   padding-top: 35px;
 }
 
-.tab_switcher {
+.account_value_tabs {
   padding: 30px 0;
+}
+
+.chart_controls .tab_switcher {
+  margin-top: -10px;
 }
 
 .tab_item {
@@ -411,8 +431,7 @@ a {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
-  margin: 0 12px;
-  padding: 5px 24px;
+  padding: 5px 18px;
   border-bottom: 2px solid transparent;
   color: #1a1a1a;
   font-size: 18px;
@@ -426,6 +445,10 @@ a {
   font-weight: 400;
   color: #1a1a1a;
   border-bottom-color: #2b8af1;
+}
+.account_value_tabs .tab_item {
+  padding: 5px 24px;
+  margin: 0 12px;
 }
 
 .account_value_switcher {
@@ -448,7 +471,8 @@ a {
 }
 
 .pairs_holder {
-  height: 60px;
+  min-height: 60px;
+  padding-bottom: 7px;
 }
 
 .main_charts {
@@ -465,17 +489,22 @@ a {
 }
 
 .chart_w {
-  float: left;
   position: relative;
   padding-top: 33px;
 }
-.chart_w.chart_s_602 {
-  width: 602px;
+
+.col {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
 }
-.chart_w.chart_s_370 {
-  width: 370px;
+.col.col_s_600 {
+  width: 600px;
 }
-.chart_w + .chart_w {
+.col.col_s_400 {
+  width: 400px;
+}
+.col + .col {
   padding-left: 30px;
 }
 
@@ -500,6 +529,124 @@ a {
   font-size: 13px;
   padding-left: 11px;
   letter-spacing: .2px;
+}
+
+.pairs_list {
+  margin-left: -4px;
+}
+.pairs_list > li {
+  float: left;
+  padding-left: 4px;
+  margin-bottom: 11px;
+  width: 7.14286%;
+}
+
+.pair_item {
+  border-radius: 3px;
+  overflow: hidden;
+  line-height: 15px;
+  text-align: center;
+}
+
+.pair_spiner {
+  height: 42px;
+  position: relative;
+}
+.pair_spiner span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  margin-top: -3px;
+  margin-left: -3px;
+  border-radius: 100%;
+  background: #c9ced6;
+}
+.pair_spiner span:before, .pair_spiner span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #c9ced6;
+}
+.pair_spiner span:before {
+  right: 100%;
+  margin-right: 2px;
+}
+.pair_spiner span:after {
+  left: 100%;
+  margin-left: 2px;
+}
+
+.pair_name {
+  height: 21px;
+  background: #c9ced6;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.pair_val {
+  background: #fff;
+  font-size: 11px;
+  height: 21px;
+  padding: 3px;
+}
+
+.order_forms {
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 365px;
+  position: relative;
+}
+.order_forms:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  border-left: 1px solid #e9eaed;
+}
+
+.form_col {
+  float: left;
+  width: 50%;
+  padding: 15px 0 50px 16px;
+  height: 100%;
+  position: relative;
+}
+
+.chat_block {
+  position: relative;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.instant_group {
+  -webkit-transition: background 0.3s, border-color 0.3s;
+  -ms-transition: background 0.3s, border-color 0.3s;
+  transition: background 0.3s, border-color 0.3s;
+  padding: 1px 1px 1px 14px;
+  margin: -1px 0 27px -16px;
+  border-left: 2px solid transparent;
+}
+.instant_group.active, .instant_group:hover {
+  border-left-color: #2b8af1;
+  background: #e9eaed;
+}
+
+.glass_holder {
+  margin-left: -20px;
+}
+
+.glass_unit {
+  float: left;
+  width: 50%;
+  padding-left: 20px;
 }
 
 .text_center {
@@ -530,6 +677,10 @@ a {
   font-size: 12px;
 }
 
+.fz_13 {
+  font-size: 13px;
+}
+
 .fz_14 {
   font-size: 14px;
 }
@@ -552,6 +703,55 @@ a {
 
 .clr_gray {
   color: #818181;
+}
+
+.clr_gray_2 {
+  color: #3f444b;
+}
+
+.chat_list {
+  max-height: 100%;
+  overflow-y: auto;
+  font-size: 13px;
+  padding: 6px 0 0;
+}
+.chat_list li {
+  border-bottom: 1px solid #ecedef;
+}
+
+.chat_msg {
+  padding: 6px 11px;
+  color: #1a1a1a;
+  letter-spacing: -.1px;
+}
+
+.chat_form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1px 9px 15px;
+}
+
+.chat_input {
+  position: relative;
+  padding-left: 23px;
+}
+
+.chat_button {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.chat_button:before {
+  font-size: 15px;
+  color: #aea0aa;
 }
 
 .header {
@@ -925,6 +1125,12 @@ a.menu_link:hover {
 .form_row {
   line-height: 28px;
 }
+.form_row_v1 .form_row {
+  margin: 18px 0;
+}
+.form_row_v1 .form_row.last_row {
+  margin: -12px 0 0;
+}
 
 .form_cell.middle_mod {
   display: inline-block;
@@ -938,6 +1144,15 @@ a.menu_link:hover {
   margin-left: 0;
 }
 
+.form_el.f_el_w55 {
+  width: 55px;
+}
+.form_el.f_el_w100 {
+  width: 100px;
+}
+.form_el.f_el_w125 {
+  width: 125px;
+}
 .form_el.f_el_w200 {
   width: 200px;
 }
@@ -1020,6 +1235,87 @@ a.menu_link:hover {
   padding-left: 8px;
 }
 
+.f_input {
+  width: 100%;
+  display: block;
+}
+.f_input.input_v1 {
+  -webkit-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  height: 28px;
+  border: 1px solid #d0d5db;
+  border-radius: 3px;
+  line-height: 16px;
+  padding: 5px 12px;
+}
+.f_input.input_v1:focus {
+  border-color: #2b8af1;
+}
+
+.form_caption {
+  color: #3f444b;
+  font-size: 17px;
+  padding-bottom: 6px;
+}
+
+.form_currency {
+  padding-left: 14px;
+  white-space: nowrap;
+}
+
+.form_footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 12px 15px;
+}
+
+.hidden_inp {
+  display: none;
+  position: absolute;
+}
+
+.check_emul {
+  display: inline-block;
+  vertical-align: middle;
+}
+.check_emul.check_v1 .check_text {
+  position: relative;
+  display: block;
+  padding-left: 26px;
+}
+.check_emul.check_v1 .check_text:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  margin-top: -8px;
+  line-height: 15px;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  background: #2b8af1;
+  border-radius: 2px;
+}
+.check_emul.check_v1 .hidden_inp:checked ~ .check_text:before {
+  content: "";
+}
+
+.gl_link.rm_link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+}
+.gl_link.rm_link:before {
+  content: "";
+  font-size: 10px;
+}
+
 .btn_v1 {
   height: 36px;
 }
@@ -1028,9 +1324,35 @@ a.menu_link:hover {
   border-radius: 4px;
   padding: 11px 20px;
 }
+.btn_v1.order_btn {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 20px;
+  text-align: center;
+}
 
 .green_btn {
   color: #fff;
+}
+
+.blue_btn {
+  -webkit-transition: background 0.3s, color 0.3s;
+  -ms-transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
+  color: #fff;
+  background: #2b8af1;
+}
+.blue_btn:hover {
+  background: #569eeb;
+}
+.blue_btn:active {
+  background: #395784;
+}
+.blue_btn[disabled='disabled'] {
+  background: #c9ced6;
+  cursor: default;
 }
 
 .gl_table_w {
@@ -1040,8 +1362,17 @@ a.menu_link:hover {
   margin-top: -2px;
   min-width: 230px;
 }
-.gl_table_w .history_table_w {
-  border-radius: 2px 2px 0 0;
+.gl_table_w.sell_orders_table_w {
+  border-radius: 2px;
+}
+.gl_table_w.history_table_w {
+  border-radius: 2px;
+}
+.gl_table_w.orders_deals_table_w {
+  border-radius: 2px;
+}
+.gl_table_w.trade_history_table_w {
+  border-radius: 2px;
 }
 .gl_table_w.table_w_v1 {
   padding-bottom: 52px;
@@ -1050,6 +1381,62 @@ a.menu_link:hover {
 .gl_table {
   width: 100%;
   border-collapse: collapse;
+}
+.gl_table.table_v1 {
+  font-size: 12px;
+}
+.gl_table.table_v1 th {
+  text-align: left;
+  color: #1a1a1a;
+  font-weight: 500;
+  background: #c9ced6;
+  padding: 8px;
+}
+.gl_table.table_v1 td {
+  font-weight: 300;
+  color: #1a1a1a;
+  line-height: 17px;
+  padding: 4px 8px 3px;
+  background: #fff;
+  border-bottom: 1px solid #e9eaed;
+}
+.gl_table.orders_deals_table td {
+  padding-top: 5px;
+}
+.gl_table.orders_deals_table .col_1 {
+  width: 110px;
+  padding-left: 27px;
+}
+.gl_table.orders_deals_table .col_2 {
+  width: 95px;
+}
+.gl_table.orders_deals_table .col_3 {
+  width: 65px;
+}
+.gl_table.orders_deals_table .col_4 {
+  width: 143px;
+}
+.gl_table.orders_deals_table .col_5 {
+  width: 153px;
+}
+.gl_table.orders_deals_table .col_6 {
+  width: 122px;
+}
+.gl_table.orders_deals_table .col_7 {
+  width: 94px;
+}
+.gl_table.orders_deals_table .col_8 {
+  width: 55px;
+  text-align: center;
+}
+.gl_table.sell_orders_table td {
+  padding-top: 5px;
+}
+.gl_table.trade_history_table th {
+  font-weight: 500;
+}
+.gl_table.trade_history_table td {
+  padding-top: 5px;
 }
 .gl_table.user_balance_table {
   font-size: 12px;
@@ -1080,24 +1467,6 @@ a.menu_link:hover {
 }
 .gl_table.user_balance_table .col_3 {
   padding-right: 10px;
-}
-.gl_table.table_v1 {
-  font-size: 12px;
-}
-.gl_table.table_v1 th {
-  text-align: left;
-  color: #1a1a1a;
-  font-weight: 500;
-  background: #c9ced6;
-  padding: 8px;
-}
-.gl_table.table_v1 td {
-  font-weight: 300;
-  color: #1a1a1a;
-  line-height: 17px;
-  padding: 4px 8px 3px;
-  background: #fff;
-  border-bottom: 1px solid #e9eaed;
 }
 .gl_table.wallet_table th.col_4 {
   text-align: center;
@@ -1201,6 +1570,9 @@ a.menu_link:hover {
   line-height: 30px;
   padding: 17px 0 12px;
 }
+.table_caption_block.table_caption_b_v2 {
+  padding: 0 0 10px;
+}
 .table_caption_block .table_caption {
   float: left;
 }
@@ -1214,6 +1586,9 @@ a.menu_link:hover {
   color: #1a1a1a;
   padding-left: 20px;
   font-weight: 400;
+}
+.chart_controls .table_caption {
+  margin-top: -8px;
 }
 
 .filter_options li {

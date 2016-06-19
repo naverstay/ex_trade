@@ -1,5 +1,22 @@
 //************  buttons
 
+.gl_link {
+
+  &.rm_link {
+    @extend .icon_before;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+
+    &:before {
+      content: $icon_remove;
+      font-size: 10px;
+    }
+  }
+
+}
+
 .btn_v1 {
   height: 36px;
 
@@ -9,11 +26,37 @@
     padding: 11px 20px;
   }
 
+  &.order_btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 20px;
+    text-align: center;
+  }
+
 }
 
 .green_btn {
   color: #fff;
-
 }
 
+.blue_btn {
+  @include transition_all(background .3s, color .3s);
+  color: #fff;
+  background: #2b8af1;
+
+  &:hover {
+    background: #569eeb;
+  }
+
+  &:active {
+    background: #395784;
+  }
+
+  &[disabled='disabled'] {
+    background: #c9ced6;
+    cursor: default;
+  }
+}
 

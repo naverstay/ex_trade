@@ -1,0 +1,50 @@
+.chat_list {
+  max-height: 100%;
+  overflow-y: auto;
+  font-size: 13px;
+  padding: 6px 0 0;
+
+  li {
+    border-bottom: 1px solid #ecedef;
+  }
+}
+
+.chat_msg {
+  padding: 6px 11px;
+  color: #1a1a1a;
+  letter-spacing: -.1px;
+}
+
+.chat_u_name {
+
+}
+
+.chat_form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1px 9px 15px;
+}
+
+.chat_input {
+  position: relative;
+  padding-left: 23px;
+}
+
+.chat_button {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+
+  &:before {
+    font-size: 15px;
+    color: #aea0aa;
+  }
+}

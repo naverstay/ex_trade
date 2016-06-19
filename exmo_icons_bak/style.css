@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'exmo_icons';
-    src:    url('fonts/exmo_icons.eot?qch4h0');
-    src:    url('fonts/exmo_icons.eot?qch4h0#iefix') format('embedded-opentype'),
-        url('fonts/exmo_icons.ttf?qch4h0') format('truetype'),
-        url('fonts/exmo_icons.woff?qch4h0') format('woff'),
-        url('fonts/exmo_icons.svg?qch4h0#exmo_icons') format('svg');
+    src:    url('fonts/exmo_icons.eot?9a3tk5');
+    src:    url('fonts/exmo_icons.eot?9a3tk5#iefix') format('embedded-opentype'),
+        url('fonts/exmo_icons.ttf?9a3tk5') format('truetype'),
+        url('fonts/exmo_icons.woff?9a3tk5') format('woff'),
+        url('fonts/exmo_icons.svg?9a3tk5#exmo_icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -39,9 +39,6 @@
 .icon_arrow-left-long:before {
     content: "\e914";
 }
-.icon_close:before {
-    content: "\e5cd";
-}
 .icon_trending_up:before {
     content: "\e911";
 }
@@ -63,9 +60,6 @@
 .icon_mail_closed:before {
     content: "\e909";
 }
-.icon_remove:before {
-    content: "\f00d";
-}
 .icon_external-link:before {
     content: "\f08e";
 }
@@ -86,12 +80,6 @@
 }
 .icon_checkmark:before {
     content: "\e902";
-}
-.icon_lock-open:before {
-    content: "\e916";
-}
-.icon_lock:before {
-    content: "\e917";
 }
 .icon_vk-alternitive:before {
     content: "\e915";

@@ -25,4 +25,27 @@ $(function ($) {
     });
 
 
+    $('.instantGroupItem').on ('click', function () {
+        $('.instantGroupItem').removeClass('active');
+        $(this).addClass('active');
+        return false;
+    });
+
+    initTabs();
+
 });
+
+
+function initTabs() {
+
+    $('.tabItem').on ('click', function () {
+        var firedEl = $(this), tabContext = $(firedEl.closest('.tabSwitcher').attr('data-tab-context'));
+
+        firedEl.addClass('active').siblings().removeClass('active');
+
+        tabContext.find('.tabUnit').eq(firedEl.index()).show().siblings().hide();
+
+        return false;
+    });
+
+}

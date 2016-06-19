@@ -12,10 +12,72 @@ html(lang='ru')
                 div.main_content
                     .section_inner
                         .pairs_holder
-                            | пары
+                            ul.pairs_list
+                                li
+                                    .pair_item
+                                        .pair_name BTC/USD
+                                        .pair_val.clr_blue: span 445.06
+                                li
+                                    .pair_item
+                                        .pair_name BTC/EUR
+                                        .pair_val: span 398.66
+                                            
+                                li
+                                    .pair_item
+                                        .pair_name BTC/RUB
+                                        .pair_val.clr_red 28438
+                                li
+                                    .pair_item
+                                        .pair_name DASH/BTC
+                                        .pair_val: span 0.013949
+
+                                li
+                                    .pair_item
+                                        .pair_name DASH/USD
+                                        .pair_val: span 6.27
+                                li
+                                    .pair_item
+                                        .pair_name ETH/BTC
+                                        .pair_val: span 0.01751006
+                                            
+                                li
+                                    .pair_item
+                                        .pair_name ETH/USD
+                                        .pair_val.clr_red: span 7.83
+                                li
+                                    .pair_item
+                                        .pair_name ETH/RUB
+                                        .pair_val: span 498.93
+                        
+                                li
+                                    .pair_item
+                                        .pair_name DOGE/BTC
+                                        .pair_val: span 0.00000051
+                                li
+                                    .pair_item
+                                        .pair_name DOGE/RUB
+                                        .pair_val.clr_blue: span 0.01442782
+                   
+                                li
+                                    .pair_item
+                                        .pair_name LTC/BTC
+                                        .pair_val: span 0.00747486
+                                li
+                                    .pair_item
+                                        .pair_name LTC/RUB
+                                        .pair_val: span 211.94
+                                             
+                                li
+                                    .pair_item
+                                        .pair_name USD/RUB
+                                        .pair_val: span 63.97
+                                li
+                                    .pair_item
+                                        .pair_spiner
+                                            span
                         
                         .main_charts
-                            .chart_w.chart_s_602
+                            .col.col_s_600: .chart_w
                                 .chart_controls
                                     .chart_caption 
                                         span.fw_500 00:19:13 
@@ -28,9 +90,401 @@ html(lang='ru')
                                         li: a.t_control_link(href='#') 1d
                                 .chart_holder.chart_v1
                                     
-                            .chart_w.chart_s_370
+                            .col.col_s_400: .chart_w
                                 .chart_holder.chart_v1
                                     
+                        .row
+                            .col.col_s_600
+                                .chart_w
+                                    .chart_controls
+                                        ul.tab_switcher.tabSwitcher(data-tab-context='#order_tab_list')
+                                            li.tabItem.tab_item.active Limit Order
+                                            li.tabItem.tab_item Instant Order
+                                    #order_tab_list
+                                        .tabUnit
+                                            .order_forms
+                                                .form_col.form_row_v1
+                                                    form(action='#')
+                                                        .form_caption Buy
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='buy_amount') Amount
+                                                            .form_el.f_el_w100.fl
+                                                                input#buy_amount.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='buy_price') Price
+                                                            .form_el.f_el_w100.fl
+                                                                input#buy_price.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray BTC
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='buy_total') Total
+                                                            .form_el.f_el_w100.fl
+                                                                input#buy_total.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='buy_commission') Commission
+                                                            .form_el.f_el_w100.fl
+                                                                input#buy_commission.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                           
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='buy_balance') Available balance
+                                                            .form_el.f_el_w100.fl
+                                                                input#buy_balance.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_row.last_row
+                                                            .form_el
+                                                                label.check_emul.check_v1
+                                                                    input.hidden_inp(type='checkbox')
+                                                                    span.check_text.clr_gray.fz_13 Использовать кредит
+                                                                span.question_icon.question_icon_blue ?
+                                                                
+                                                        .form_footer
+                                                            button.order_btn.btn_v1.blue_btn.fz_16 Buy BTC
+                                                            
+                                                .form_col.form_row_v1
+                                                    form(action='#')
+                                                        .form_caption Buy
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='sell_amount') Amount
+                                                            .form_el.f_el_w100.fl
+                                                                input#sell_amount.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='sell_price') Price
+                                                            .form_el.f_el_w100.fl
+                                                                input#sell_price.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray BTC
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='sell_total') Total
+                                                            .form_el.f_el_w100.fl
+                                                                input#sell_total.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='sell_commission') Commission
+                                                            .form_el.f_el_w100.fl
+                                                                input#sell_commission.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                           
+                                                        .form_row
+                                                            .form_el.f_el_w125.fl
+                                                                label.clr_gray.fw_300.fz_14(for='sell_balance') Available balance
+                                                            .form_el.f_el_w100.fl
+                                                                input#sell_balance.input_v1.f_input
+                                                            .form_el.f_el_w55.fl.form_currency
+                                                                span.clr_gray USD
+                                                                
+                                                        .form_footer
+                                                            button.order_btn.btn_v1.blue_btn.fz_16(disabled='disabled') Buy BTC
+
+                                        .tabUnit(style='display:none;')
+                                            .order_forms
+                                                .form_col.form_row_v1
+                                                    form(action='#')
+                                                        .form_caption Buy
+                                                        .instantGroupItem.instant_group.active
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_buy_amount') Amount
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_buy_amount.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                                    
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_buy_total') Total
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_buy_total.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray BTC
+                                                                    
+                                                        .instantGroupItem.instant_group
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_buy_for_amount') For the amount of:
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_buy_for_amount.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                                    
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_buy_amount_will') The amount will be
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_buy_amount_will.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                           
+                                                                
+                                                        .form_footer
+                                                            button.order_btn.btn_v1.blue_btn.fz_16() Buy BTC
+
+                                                .form_col.form_row_v1
+                                                    form(action='#')
+                                                        .form_caption Sell
+                                                        .instantGroupItem.instant_group
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_sell_amount') Amount
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_sell_amount.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                                    
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_sell_total') Total
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_sell_total.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray BTC
+                                                                    
+                                                        .instantGroupItem.instant_group
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_sell_for_amount') For the amount of:
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_sell_for_amount.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                                    
+                                                            .form_row
+                                                                .form_el.f_el_w125.fl
+                                                                    label.clr_gray.fw_300.fz_14(for='ins_sell_amount_will') The amount will be
+                                                                .form_el.f_el_w100.fl
+                                                                    input#ins_sell_amount_will.input_v1.f_input
+                                                                .form_el.f_el_w55.fl.form_currency
+                                                                    span.clr_gray USD
+                                                           
+                                                                
+                                                        .form_footer
+                                                            button.order_btn.btn_v1.blue_btn.fz_16() Sell BTC
+
+                            .col.col_s_400
+                                .chart_w
+                                    .chart_controls
+                                        .table_caption 
+                                            span.fw_300 Online: 
+                                            |  12345
+
+                                .order_forms
+                                    .chat_block
+                                        ul.chat_list
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span like
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user2: 
+                                                    span user1 I like English please what are you talking about?
+                                                    
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span user2 is a rich doge
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user3: 
+                                                    span Hi
+                                                    
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span hi user
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user2: 
+                                                    span How is the market doing for u . so far?
+
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_red Admin: 
+                                                    span I want to know about this site. 
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user3: 
+                                                    span where you from?
+                                                    
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_red user1: 
+                                                    span irdosi send ur facebook address we can talk real time
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user4: 
+                                                    span hi all !
+                                                    
+                                            li 
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span hi user
+                                        .chat_form
+                                            form(action='#')
+                                                .chat_input
+                                                    input.clr_gray.f_input.input_v1.fw_300.fz_13(placeholder='Message Text')
+                                                    .chat_button.icon_lock-open
 
 
+                        .row
+                            .col.col_s_600
+                                .glass_holder
+                                    .glass_unit
+                                        .chart_w
+                                            .chart_controls
+                                                .table_caption Sell Orders
+                                            .gl_table_w.sell_orders_table_w
+                                                table.gl_table.sell_orders_table.table_v1
+                                                    thead
+                                                        tr
+                                                            th.col_1: span.t_t Price
+                                                            th.col_2: span.t_t BTC
+                                                            th.col_3: span.t_t USD
+
+                                                    tbody
+                                                        +loop_while(15)
+                                                            tr
+                                                                td.col_1: span.t_t 89.3051234
+                                                                td.col_2: span.t_t 1.93051234
+                                                                td.col_3: span.t_t 389.051234
+                                                                
+                                                        tr.footer_row
+                                                            td.col_1: span.t_t.clr_gray Volume 
+                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2 389.051234
+                                                    
+                                    .glass_unit
+                                        .chart_w
+                                            .chart_controls
+                                                .table_caption Buy Orders
+                                            .gl_table_w.sell_orders_table_w
+                                                table.gl_table.sell_orders_table.table_v1
+                                                    thead
+                                                        tr
+                                                            th.col_1: span.t_t Price
+                                                            th.col_2: span.t_t BTC
+                                                            th.col_3: span.t_t USD
+
+                                                    tbody
+                                                        +loop_while(15)
+                                                            tr
+                                                                td.col_1: span.t_t 89.3051234
+                                                                td.col_2: span.t_t 1.93051234
+                                                                td.col_3: span.t_t 389.051234
+                                                                
+                                                        tr.footer_row
+                                                            td.col_1: span.t_t.clr_gray Volume 
+                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2 389.051234
+                                                                
+                                                                
+
+                            .col.col_s_400
+                                .chart_w
+                                    .chart_controls
+                                        .table_caption Trade History
+                                    .gl_table_w.trade_history_table_w
+                                        table.gl_table.trade_history_table.table_v1
+                                            thead
+                                                tr
+                                                    th.col_1: span.t_t Time
+                                                    th.col_2: span.t_t Type
+                                                    th.col_3: span.t_t Price
+                                                    th.col_4: span.t_t Amount
+                                                    th.col_5: span.t_t Value
+
+                                            tbody
+                                                +loop_while(8)
+                                                    tr
+                                                        td.col_1: span.t_t 11.07 12:30
+                                                        td.col_2: span.t_t.clr_blue.fw_500 Buy
+                                                        td.col_3: span.t_t 89.3051234
+                                                        td.col_4: span.t_t 1.93051234
+                                                        td.col_5: span.t_t 389.051234
+                                                        
+                                                    tr
+                                                        td.col_1: span.t_t 09.07 17:30
+                                                        td.col_2: span.t_t.clr_red.fw_500 Sell
+                                                        td.col_3: span.t_t 34.929
+                                                        td.col_4: span.t_t 4.46929
+                                                        td.col_5: span.t_t 734.931
+                                                        
+                        .row: .col
+                            .table_caption_block.table_caption_b_v2
+                                h3.table_caption My Orders & Deals  
+                                ul.filter_options
+                                    li.active: a.t_control_link(href='#') 10
+                                    li: a.t_control_link(href='#') 25
+                                    li: a.t_control_link(href='#') 50
+
+
+                            .gl_table_w.orders_deals_table_w
+                                table.gl_table.orders_deals_table.table_v1
+                                    thead
+                                        tr
+                                            th.col_1: span.t_t Order ID   
+                                            th.col_2: span.t_t Date/Time 
+                                            th.col_3: span.t_t Type
+                                            th.col_4: span.t_t Amount
+                                            th.col_5: span.t_t Price
+                                            th.col_6: span.t_t Total
+                                            th.col_7: span.t_t Status
+                                            th.col_8: span.t_t
+                                                a.gl_link.clr_red(href='#') Delete all
+
+                                    tbody
+                                        +loop_while(10)
+                                            tr
+                                                td.col_1: span.t_t 24557484
+                                                td.col_2: span.t_t 11.07 12:30
+                                                td.col_3: span.t_t.clr_blue Buy
+                                                td.col_4: span.t_t 89.3051234
+                                                td.col_5: span.t_t.clr_gray_2 1.93051234
+                                                td.col_6: span.t_t 389.051234
+                                                td.col_7: span.t_t.clr_blue Active
+                                                td.col_8: span.t_t
+                                                    a.gl_link.rm_link.clr_red(href='#') 
+                                                    
+                                        +loop_while(15)
+                                            tr
+                                                td.col_1: span.t_t.clr_gray 24557484
+                                                td.col_2: span.t_t.clr_gray 11.07 12:30
+                                                td.col_3: span.t_t.clr_blue Buy
+                                                td.col_4: span.t_t.clr_gray 89.3051234
+                                                td.col_5: span.t_t.clr_gray_2 1.93051234
+                                                td.col_6: span.t_t.clr_gray 389.051234
+                                                td.col_7: span.t_t.clr_gray Deal
+                                                td.col_8: span.t_t
+                                                    
+                                                    
+
+                            .table_caption_block
+                                .filter_options
+                                    a.t_pagination_link.t_pag_prev(href='#') Prev
+                                    a.t_pagination_link.t_pag_next(href='#') Next
+                                    
             +footer()

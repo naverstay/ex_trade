@@ -10,8 +10,20 @@
   &.wallet_table_w {
   }
 
-  .history_table_w {
-    border-radius: 2px 2px 0 0;
+  &.sell_orders_table_w {
+    border-radius: 2px;
+  }
+
+  &.history_table_w {
+    border-radius: 2px;
+  }
+
+  &.orders_deals_table_w {
+    border-radius: 2px;
+  }
+
+  &.trade_history_table_w {
+    border-radius: 2px;
   }
 
   &.table_w_v1 {
@@ -22,6 +34,87 @@
 .gl_table {
   width: 100%;
   border-collapse: collapse;
+
+  &.table_v1 {
+    font-size: 12px;
+
+    th {
+      text-align: left;
+      color: #1a1a1a;
+      font-weight: 500;
+      background: #c9ced6;
+      padding: 8px;
+    }
+
+    td {
+      font-weight: 300;
+      color: #1a1a1a;
+      line-height: 17px;
+      padding: 4px 8px 3px;
+      background: #fff;
+      border-bottom: 1px solid #e9eaed;
+    }
+  }
+
+  &.orders_deals_table {
+
+    td {
+      padding-top: 5px;
+    }
+
+    .col_1 {
+      width: 110px;
+      padding-left: 27px;
+    }
+
+    .col_2 {
+      width: 95px;
+    }
+
+    .col_3 {
+      width: 65px;
+    }
+
+    .col_4 {
+      width: 143px;
+    }
+
+    .col_5 {
+      width: 153px;
+    }
+
+    .col_6 {
+      width: 122px;
+    }
+
+    .col_7 {
+      width: 94px;
+    }
+
+    .col_8 {
+      width: 55px;
+      text-align: center;
+    }
+  }
+
+  &.sell_orders_table {
+
+    td {
+      padding-top: 5px;
+    }
+  }
+
+  &.trade_history_table {
+
+    th {
+      font-weight: 500;
+    }
+
+    td {
+      padding-top: 5px;
+    }
+
+  }
 
   &.user_balance_table {
     font-size: 12px;
@@ -76,27 +169,6 @@
       padding-right: 10px;
     }
 
-  }
-
-  &.table_v1 {
-    font-size: 12px;
-
-    th {
-      text-align: left;
-      color: #1a1a1a;
-      font-weight: 500;
-      background: #c9ced6;
-      padding: 8px;
-    }
-
-    td {
-      font-weight: 300;
-      color: #1a1a1a;
-      line-height: 17px;
-      padding: 4px 8px 3px;
-      background: #fff;
-      border-bottom: 1px solid #e9eaed;
-    }
   }
 
   &.wallet_table {
@@ -261,6 +333,10 @@
   line-height: 30px;
   padding: 17px 0 12px;
 
+  &.table_caption_b_v2 {
+    padding: 0 0 10px;
+  }
+
   .table_caption {
     float: left;
   }
@@ -268,7 +344,6 @@
   .filter_options {
     float: right;
   }
-
 }
 
 .table_caption {
@@ -277,6 +352,11 @@
   color: #1a1a1a;
   padding-left: 20px;
   font-weight: 400;
+
+  .chart_controls & {
+    margin-top: -8px;
+  }
+
 }
 
 .filter_options {
@@ -332,7 +412,7 @@
   &:hover {
     color: #515962;
   }
-  
+
   &.t_pag_prev {
     @extend .icon_chevron-left;
     padding-left: 21px;
@@ -340,7 +420,7 @@
     &:before {
       left: -2px;
     }
-    
+
     &:hover {
       &:before {
         left: -4px;
