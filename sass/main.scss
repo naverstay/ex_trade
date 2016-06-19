@@ -260,6 +260,17 @@ a {
   background: #c9ced6;
   font-size: 12px;
   padding: 3px;
+
+  .pair_item:hover & {
+    color: #818181;
+    background: #c9ced6;
+  }
+  
+  .pair_item.active &,
+  .pair_item:active & {
+    color: #fff;
+    background: #395784;
+  }
 }
 
 .pair_val {
@@ -267,6 +278,10 @@ a {
   font-size: 11px;
   height: 21px;
   padding: 3px;
+
+  .pair_item:hover & {
+    color: #818181;
+  }
 }
 
 .order_forms {
