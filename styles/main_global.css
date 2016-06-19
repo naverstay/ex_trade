@@ -1655,8 +1655,17 @@ a.menu_link:hover {
 .t_pagination_link.t_pag_prev:before {
   left: -2px;
 }
+.t_pagination_link.t_pag_prev:hover {
+  color: #3f444b;
+}
 .t_pagination_link.t_pag_prev:hover:before {
-  left: -4px;
+  color: #4896ea;
+}
+.t_pagination_link.t_pag_prev:active {
+  color: #3f444b;
+}
+.t_pagination_link.t_pag_prev:active:before {
+  color: #395784;
 }
 .t_pagination_link.t_pag_next {
   padding-right: 21px;
@@ -1664,8 +1673,23 @@ a.menu_link:hover {
 .t_pagination_link.t_pag_next:before {
   right: -4px;
 }
+.t_pagination_link.t_pag_next:hover {
+  color: #3f444b;
+}
 .t_pagination_link.t_pag_next:hover:before {
-  right: -6px;
+  color: #4896ea;
+}
+.t_pagination_link.t_pag_next:active {
+  color: #3f444b;
+}
+.t_pagination_link.t_pag_next:active:before {
+  color: #395784;
+}
+.t_pagination_link.disabled {
+  color: #818181;
+}
+.t_pagination_link.disabled:before {
+  color: #c9ced6;
 }
 
 .footer {

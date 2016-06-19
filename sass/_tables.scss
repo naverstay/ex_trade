@@ -422,8 +422,18 @@
     }
 
     &:hover {
+      color: #3f444b;
+
       &:before {
-        left: -4px;
+        color: #4896ea;
+      }
+    }
+
+    &:active {
+      color: #3f444b;
+
+      &:before {
+        color: #395784;
       }
     }
   }
@@ -437,9 +447,29 @@
     }
 
     &:hover {
+      color: #3f444b;
+      
       &:before {
-        right: -6px;
+        color: #4896ea;
+      }
+    }
+
+    &:active {
+      color: #3f444b;
+
+      &:before {
+        color: #395784;
       }
     }
   }
+
+  &.disabled {
+    color: #818181;
+
+    &:before {
+      color: #c9ced6;
+    }
+
+  }
+
 }
