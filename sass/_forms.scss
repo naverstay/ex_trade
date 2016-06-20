@@ -25,7 +25,14 @@
         margin-left: 0;
       }
     }
+  }
 
+  &.form_cell_group {
+    @extend %clearfix;
+
+    .form_el {
+      float: left;
+    }
   }
 
 }
@@ -44,8 +51,20 @@
     width: 125px;
   }
 
+  &.f_el_w153 {
+    width: 153px;
+  }
+
   &.f_el_w200 {
     width: 200px;
+  }
+
+  &.f_el_w230 {
+    width: 230px;
+  }
+
+  &.f_el_w270 {
+    width: 270px;
   }
 }
 
@@ -66,6 +85,12 @@
   }
 
   .select_box_v1 & {
+    min-width: 100%;
+    background: #c9ced6;
+    border-radius: 0 0 3px 3px;
+  }
+
+  .select_box_v2 & {
     min-width: 100%;
     background: #c9ced6;
     border-radius: 0 0 3px 3px;
@@ -115,7 +140,7 @@
   }
 
   .disabled.select_box_v1 & {
-    @extend %no-user-select;
+    @extend %no_text_selection;
     background: #d9dce1;
     color: #adaeb1;
     cursor: not-allowed;
@@ -125,6 +150,64 @@
       color: #adaeb1;
     }
   }
+
+  .select_box_v2 & {
+    @extend .icon_before;
+    @extend .icon_chevron-down;
+    border-radius: 0 3px 3px 0;
+    padding: 0 22px;
+    height: 28px;
+    background: #c9ced6;
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      margin-top: -10px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 10px;
+      color: #838383;
+    }
+
+    .currency_sum {
+      display: none;
+    }
+
+    &:hover {
+
+      &:before {
+        color: #1b1b1b;
+      }
+    }
+  }
+
+  .opened.select_box_v2 & {
+    @extend .icon_chevron-up;
+    border-radius: 0 3px 0 0;
+    color: #818181;
+    text-align: left;
+
+    &:before {
+      color: #818181;
+    }
+  }
+
+  .disabled.select_box_v2 & {
+    @extend %no_text_selection;
+    background: #d9dce1;
+    color: #adaeb1;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:before {
+      color: #adaeb1;
+    }
+  }
+
 }
 
 .select_item {
@@ -133,6 +216,28 @@
   .select_box_v1 & {
     padding: 0 22px;
     height: 30px;
+
+    &:hover {
+      background: #2a89ef;
+      color: #fff;
+    }
+  }
+
+  .select_box_v2 & {
+    @extend %clearfix;
+    padding: 0 22px;
+    height: 30px;
+
+    .currency_sum {
+      float: left;
+      width: 39.5%;
+      text-align: right;
+      padding-right: 2px;
+    }
+
+    .currency_label {
+      float: left;
+    }
 
     &:hover {
       background: #2a89ef;
@@ -159,6 +264,20 @@
 
     &:focus {
       border-color: #2b8af1;
+    }
+  }
+
+  &.input_v2 {
+    @include transition_all(border-color .3s);
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    line-height: 16px;
+    padding: 5px 12px;
+    background: #fff;
+
+    &:focus {
+      //border-color: #2b8af1;
     }
   }
 }

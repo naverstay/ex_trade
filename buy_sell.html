@@ -81,7 +81,7 @@
             <ul class="user_menu">
               <li class="user_m_item"><a href="#" class="user_m_link"><span class="fw_300 mb">Support</span><span class="question_icon">?</span></a></li>
               <li class="user_m_item">
-                <div class="user_m_link drop_down_holder"><span class="fw_300 mb">EN</span><span class="icon_chevron-down menu_drop_icon mb"></span>
+                <div class="user_m_link drop_down_holder no_text_selection"><span class="fw_300 mb">EN</span><span class="menu_drop_icon mb"></span>
                   <div class="drop_down_wrapper drop_down_center">
                     <ul class="personal_menu text_center">
                       <li class="personal_m_item"><a href="#" class="personal_m_link">EN</a></li>
@@ -92,7 +92,7 @@
                 </div>
               </li>
               <li class="user_m_item">
-                <div class="user_m_link drop_down_holder"><span class="mb user_avatar"><span class="icon_profile"></span></span><span class="icon_chevron-down menu_drop_icon mb"></span>
+                <div class="user_m_link drop_down_holder no_text_selection"><span class="mb user_avatar"><span class="icon_profile"></span></span><span class="menu_drop_icon mb"></span>
                   <div class="drop_down_wrapper drop_down_right">
                     <ul class="personal_menu wide_menu">
                       <li class="personal_m_item"><a href="#" class="personal_m_link"><span class="personal_m_text">Settings</span><span class="personal_m_icon icon_gear"></span></a></li>
@@ -111,11 +111,206 @@
           </div>
         </div>
         <div class="main_content">
-          <ul class="tab_switcher text_center">
-            <li class="tab_item active"> Balance</li>
-            <li class="tab_item"> Lending</li>
-            <li class="tab_item"> Investment</li>
-          </ul>
+          <div class="section_inner">
+            <div class="text_center gl_caption page_caption clr_black fw_300 fz_24">Indicate the currency pair you wish to exchange</div>
+            <div class="text_center">
+              <div class="gl_table_w buy_sell_options_table_w text_center">
+                <table class="buy_sell_options_table gl_table table_v2">
+                  <tr>
+                    <td class="col_1">
+                      <div class="form_row form_row_v1">
+                        <div class="form_el">
+                          <label for="send_val" class="f_label fz_18">I send:</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col_2">
+                      <div class="form_row form_row_v1">
+                        <div class="form_cell form_cell_group">
+                          <div class="form_el f_el_w153">
+                            <input id="send_val" value="12344" class="input_v2 f_input text_right">
+                          </div>
+                          <div class="form_el f_el_w230">
+                            <div class="select_box selectBox select_box_v2 disabled_">
+                              <div class="selectVal select_val"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">EUR </span><span> (Euros)</span></span></div>
+                              <ul class="selectDropDown select_drop_down">
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"><span class="fw_400">USD </span><span> (US Dollars)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">RUR </span><span> (Roubles)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">BTC </span><span> (Bitcoins)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">LTC </span><span> (Litecoins)</span></span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="exchange_tip">
+                        <p class="clr_red">Not enough funds:  -123456789 RUR</p>
+                        <p>  <span class="clr_gray">Please </span><a href="#" class="gl_link clr_blue fw_400">refill your balance</a></p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="col_1">
+                      <div class="form_row form_row_v1">
+                        <div class="form_el">
+                          <label for="receive_val" class="f_label fz_18">I receive:</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="col_2">
+                      <div class="form_row form_row_v1">
+                        <div class="form_cell form_cell_group">
+                          <div class="form_el f_el_w153">
+                            <input id="receive_val" value="12344" class="input_v2 f_input text_right">
+                          </div>
+                          <div class="form_el f_el_w230">
+                            <div class="select_box selectBox select_box_v2 disabled_">
+                              <div class="selectVal select_val"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">EUR </span><span> (Euros)</span></span></div>
+                              <ul class="selectDropDown select_drop_down">
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"><span class="fw_400">USD </span><span> (US Dollars)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">RUR </span><span> (Roubles)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">BTC </span><span> (Bitcoins)</span></span></li>
+                                <li class="selectItem select_item"><span class="currency_sum">1.23445679</span><span class="currency_label"> <span class="fw_400">LTC </span><span> (Litecoins)</span></span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="exchange_tip">
+                        <p class="fz_14"><span class="clr_gray">The new balance will be: ~ </span><span class="clr_black">123456789 RUR</span></p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="col_1">&nbsp;</td>
+                    <td class="col_2">
+                      <div class="best_exchange_w">
+                        <div class="best_exchange">
+                          <p><span class="clr_gray">Best exchange rate: </span><span> 1386 USD ~ 1BTC </span></p>
+                        </div>
+                      </div>
+                      <div class="form_row form_row_v1">
+                        <div class="form_cell form_cell_group">
+                          <div class="form_el f_el_w270">
+                            <button class="btn_v1 blue_btn exchange_btn fz_16 fw_300">Exchange</button>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="table_holder">
+              <div class="table_caption_block">
+                <h3 class="table_caption">Buy/Sell History </h3>
+                <ul class="filter_options">
+                  <li class="active"><a href="#" class="t_control_link">10</a></li>
+                  <li><a href="#" class="t_control_link">25</a></li>
+                  <li><a href="#" class="t_control_link">50</a></li>
+                </ul>
+              </div>
+              <div class="gl_table_w buy_sell_history_table_w">
+                <table class="gl_table buy_sell_history_table table_v1">
+                  <thead>
+                    <tr>
+                      <th class="col_1"><span class="t_t">Date/Time</span></th>
+                      <th class="col_2"><span class="t_t">Currency sent</span></th>
+                      <th class="col_3"><span class="t_t">Currency received</span></th>
+                      <th class="col_4"><span class="t_t">Amount</span></th>
+                      <th class="col_5"><span class="t_t">Price</span></th>
+                      <th class="col_6"><span class="t_t">Total</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                    <tr>
+                      <td class="col_1"><span class="t_t">11.07 12:30</span></td>
+                      <td class="col_2"><span class="t_t">RUB</span></td>
+                      <td class="col_3"><span class="t_t">USD</span></td>
+                      <td class="col_4"><span class="t_t">89.3051234</span></td>
+                      <td class="col_5"><span class="t_t">1.93051234</span></td>
+                      <td class="col_6"><span class="t_t">389.051234</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table_caption_block">
+                <div class="filter_options"><a href="#" class="t_pagination_link t_pag_prev">Prev</a><a href="#" class="t_pagination_link t_pag_next">Next</a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer">

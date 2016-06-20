@@ -2,6 +2,14 @@
 .gl_table_w {
   overflow: hidden;
 
+  &.buy_sell_options_table_w {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    overflow: visible;
+    margin-bottom: 68px;
+  }
+
   &.user_balance_table_w {
     margin-top: -2px;
     min-width: 230px;
@@ -23,6 +31,10 @@
   }
 
   &.trade_history_table_w {
+    border-radius: 2px;
+  }
+
+  &.buy_sell_history_table_w {
     border-radius: 2px;
   }
 
@@ -54,6 +66,33 @@
       background: #fff;
       border-bottom: 1px solid #e9eaed;
     }
+  }
+
+  &.table_v2 {
+    font-size: 13px;
+
+    td {
+      font-weight: 300;
+      color: #1a1a1a;
+    }
+  }
+
+  &.buy_sell_options_table {
+
+    td {
+      padding-bottom: 10px;
+      vertical-align: top;
+    }
+
+    .col_1 {
+      padding-right: 42px;
+      text-align: right;
+    }
+
+    .col_2 {
+      padding-right: 3px;
+    }
+
   }
 
   &.orders_deals_table {
@@ -94,6 +133,38 @@
     .col_8 {
       width: 55px;
       text-align: center;
+    }
+  }
+
+  &.buy_sell_history_table {
+
+    td {
+      padding-top: 5px;
+    }
+
+    .col_1 {
+      width: 120px;
+      padding-left: 27px;
+    }
+
+    .col_2 {
+      width: 140px;
+    }
+
+    .col_3 {
+      width: 175px;
+    }
+
+    .col_4 {
+      width: 160px;
+    }
+
+    .col_5 {
+      width: 170px;
+    }
+
+    .col_6 {
+      width: 150px;
     }
   }
 
@@ -448,7 +519,7 @@
 
     &:hover {
       color: #3f444b;
-      
+
       &:before {
         color: #4896ea;
       }

@@ -63,12 +63,18 @@ a.user_m_link {
 }
 
 .menu_drop_icon {
+  @extend .icon_before;
   font-size: 10px;
   line-height: 17px;
   padding-left: 5px;
+  
+  &:before {
+    content: $icon-chevron-down;
+  }  
 }
 
 .question_icon {
+  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
   border-radius: 100%;
@@ -176,7 +182,6 @@ a.menu_link {
     margin-top: -12px;
     font-size: 10px;
   }
-
 }
 
 .account_val {
@@ -187,6 +192,14 @@ a.menu_link {
   position: relative;
 
   &:hover {
+    
+    .menu_drop_icon {
+
+      &:before {
+        content: $icon-chevron-up;
+      }
+    }
+    
     .drop_down_wrapper {
       display: block;
     }

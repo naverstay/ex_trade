@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_charts:after, .row:after, .chart_controls:after, .pairs_list:after, .glass_holder:after, .form_row:after, .table_caption_block:after, .footer_info:after {
+.main_charts:after, .row:after, .chart_controls:after, .pairs_list:after, .glass_holder:after, .form_row:after, .form_cell.form_cell_group:after, .select_box_v2 .select_item:after, .table_caption_block:after, .footer_info:after {
   position: static;
   display: block;
   height: 0;
@@ -8,7 +8,10 @@
   visibility: hidden;
 }
 
-.disabled.select_box_v1 .select_val {
+.no_text_selection,
+label,
+.disabled.select_box_v1 .select_val,
+.disabled.select_box_v2 .select_val {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -319,11 +322,11 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_chevron-down:before, .account_estate:before, .select_box_v1 .select_val:before {
+.icon_chevron-down:before, .account_estate:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before {
   content: "";
 }
 
-.icon_chevron-up:before, .opened.select_box_v1 .select_val:before {
+.icon_chevron-up:before, .opened.select_box_v1 .select_val:before, .opened.select_box_v2 .select_val:before {
   content: "";
 }
 
@@ -335,7 +338,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_before:after, .external_link:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.rm_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.rm_link:before, .t_control_btn:before, .t_pagination_link:before {
+.icon_before:after, .external_link:after, .menu_drop_icon:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.rm_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.rm_link:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -546,6 +549,7 @@ a {
   overflow: hidden;
   line-height: 15px;
   text-align: center;
+  cursor: pointer;
 }
 
 .pair_spiner {
@@ -660,6 +664,32 @@ a {
   padding-left: 20px;
 }
 
+.exchange_tip {
+  padding: 12px 5px;
+  min-height: 67px;
+}
+.exchange_tip p {
+  margin-bottom: 5px;
+}
+
+.best_exchange_w {
+  min-height: 82px;
+  padding-bottom: 10px;
+}
+
+.best_exchange {
+  border-radius: 3px;
+  text-align: center;
+  background: #fafafa;
+  padding: 5px 25px 5px 5px;
+  line-height: 18px;
+  letter-spacing: .5px;
+}
+
+.gl_caption.page_caption {
+  margin: 38px 0 65px;
+}
+
 .text_center {
   text-align: center;
 }
@@ -678,6 +708,10 @@ a {
 
 .fw_300 {
   font-weight: 300;
+}
+
+.fw_400 {
+  font-weight: 400;
 }
 
 .fw_500 {
@@ -704,8 +738,20 @@ a {
   font-size: 16px;
 }
 
+.fz_18 {
+  font-size: 18px;
+}
+
+.fz_24 {
+  font-size: 24px;
+}
+
 .clr_blue {
   color: #2b8af1;
+}
+
+.clr_black {
+  color: #353940;
 }
 
 .clr_red {
@@ -827,8 +873,12 @@ a.user_m_link {
   line-height: 17px;
   padding-left: 5px;
 }
+.menu_drop_icon:before {
+  content: "";
+}
 
 .question_icon {
+  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
   border-radius: 100%;
@@ -929,6 +979,9 @@ a.menu_link:hover {
 
 .drop_down_holder {
   position: relative;
+}
+.drop_down_holder:hover .menu_drop_icon:before {
+  content: "";
 }
 .drop_down_holder:hover .drop_down_wrapper {
   display: block;
@@ -1154,6 +1207,9 @@ a.menu_link:hover {
 .form_cell.middle_mod .form_el:first-child {
   margin-left: 0;
 }
+.form_cell.form_cell_group .form_el {
+  float: left;
+}
 
 .form_el.f_el_w55 {
   width: 55px;
@@ -1164,8 +1220,17 @@ a.menu_link:hover {
 .form_el.f_el_w125 {
   width: 125px;
 }
+.form_el.f_el_w153 {
+  width: 153px;
+}
 .form_el.f_el_w200 {
   width: 200px;
+}
+.form_el.f_el_w230 {
+  width: 230px;
+}
+.form_el.f_el_w270 {
+  width: 270px;
 }
 
 .select_box {
@@ -1184,6 +1249,11 @@ a.menu_link:hover {
   z-index: 2;
 }
 .select_box_v1 .select_drop_down {
+  min-width: 100%;
+  background: #c9ced6;
+  border-radius: 0 0 3px 3px;
+}
+.select_box_v2 .select_drop_down {
   min-width: 100%;
   background: #c9ced6;
   border-radius: 0 0 3px 3px;
@@ -1229,6 +1299,48 @@ a.menu_link:hover {
 .disabled.select_box_v1 .select_val:before {
   color: #adaeb1;
 }
+.select_box_v2 .select_val {
+  border-radius: 0 3px 3px 0;
+  padding: 0 22px;
+  height: 28px;
+  background: #c9ced6;
+  color: #000;
+  font-weight: 300;
+  text-align: center;
+}
+.select_box_v2 .select_val:before {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: -10px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+  color: #838383;
+}
+.select_box_v2 .select_val .currency_sum {
+  display: none;
+}
+.select_box_v2 .select_val:hover:before {
+  color: #1b1b1b;
+}
+.opened.select_box_v2 .select_val {
+  border-radius: 0 3px 0 0;
+  color: #818181;
+  text-align: left;
+}
+.opened.select_box_v2 .select_val:before {
+  color: #818181;
+}
+.disabled.select_box_v2 .select_val {
+  background: #d9dce1;
+  color: #adaeb1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.disabled.select_box_v2 .select_val:before {
+  color: #adaeb1;
+}
 
 .select_item {
   cursor: pointer;
@@ -1238,6 +1350,23 @@ a.menu_link:hover {
   height: 30px;
 }
 .select_box_v1 .select_item:hover {
+  background: #2a89ef;
+  color: #fff;
+}
+.select_box_v2 .select_item {
+  padding: 0 22px;
+  height: 30px;
+}
+.select_box_v2 .select_item .currency_sum {
+  float: left;
+  width: 39.5%;
+  text-align: right;
+  padding-right: 2px;
+}
+.select_box_v2 .select_item .currency_label {
+  float: left;
+}
+.select_box_v2 .select_item:hover {
   background: #2a89ef;
   color: #fff;
 }
@@ -1262,6 +1391,17 @@ a.menu_link:hover {
 }
 .f_input.input_v1:focus {
   border-color: #2b8af1;
+}
+.f_input.input_v2 {
+  -webkit-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px 0 0 3px;
+  line-height: 16px;
+  padding: 5px 12px;
+  background: #fff;
 }
 
 .form_caption {
@@ -1317,6 +1457,13 @@ a.menu_link:hover {
   background: #2b8af1;
 }
 
+.gl_link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.gl_link:hover {
+  text-decoration: underline;
+}
 .gl_link.rm_link {
   display: inline-block;
   vertical-align: middle;
@@ -1342,6 +1489,16 @@ a.menu_link:hover {
   cursor: pointer;
   border-radius: 4px;
   padding: 8px 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.btn_v1.exchange_btn {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 20px;
+  line-height: 20px;
   text-align: center;
 }
 
@@ -1370,6 +1527,13 @@ a.menu_link:hover {
 .gl_table_w {
   overflow: hidden;
 }
+.gl_table_w.buy_sell_options_table_w {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  overflow: visible;
+  margin-bottom: 68px;
+}
 .gl_table_w.user_balance_table_w {
   margin-top: -2px;
   min-width: 230px;
@@ -1384,6 +1548,9 @@ a.menu_link:hover {
   border-radius: 2px;
 }
 .gl_table_w.trade_history_table_w {
+  border-radius: 2px;
+}
+.gl_table_w.buy_sell_history_table_w {
   border-radius: 2px;
 }
 .gl_table_w.table_w_v1 {
@@ -1411,6 +1578,24 @@ a.menu_link:hover {
   padding: 4px 8px 3px;
   background: #fff;
   border-bottom: 1px solid #e9eaed;
+}
+.gl_table.table_v2 {
+  font-size: 13px;
+}
+.gl_table.table_v2 td {
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.gl_table.buy_sell_options_table td {
+  padding-bottom: 10px;
+  vertical-align: top;
+}
+.gl_table.buy_sell_options_table .col_1 {
+  padding-right: 42px;
+  text-align: right;
+}
+.gl_table.buy_sell_options_table .col_2 {
+  padding-right: 3px;
 }
 .gl_table.orders_deals_table td {
   padding-top: 5px;
@@ -1440,6 +1625,28 @@ a.menu_link:hover {
 .gl_table.orders_deals_table .col_8 {
   width: 55px;
   text-align: center;
+}
+.gl_table.buy_sell_history_table td {
+  padding-top: 5px;
+}
+.gl_table.buy_sell_history_table .col_1 {
+  width: 120px;
+  padding-left: 27px;
+}
+.gl_table.buy_sell_history_table .col_2 {
+  width: 140px;
+}
+.gl_table.buy_sell_history_table .col_3 {
+  width: 175px;
+}
+.gl_table.buy_sell_history_table .col_4 {
+  width: 160px;
+}
+.gl_table.buy_sell_history_table .col_5 {
+  width: 170px;
+}
+.gl_table.buy_sell_history_table .col_6 {
+  width: 150px;
 }
 .gl_table.sell_orders_table td {
   padding-top: 5px;
@@ -1552,7 +1759,7 @@ a.menu_link:hover {
   text-decoration: none;
   padding-right: 20px;
 }
-.t_control_btn.icon_chevron-down:before, .t_control_btn.account_estate:before, .select_box_v1 .t_control_btn.select_val:before {
+.t_control_btn.icon_chevron-down:before, .t_control_btn.account_estate:before, .select_box_v1 .t_control_btn.select_val:before, .select_box_v2 .t_control_btn.select_val:before {
   position: absolute;
   right: 2px;
   height: 16px;

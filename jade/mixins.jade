@@ -66,7 +66,6 @@ mixin header(active_menu)
                                                     td.col_2 0
                                                     td.col_3 0123456789
                                             
-                                            
             ul.user_menu
                 li.user_m_item
                     a.user_m_link(href='#')
@@ -74,9 +73,9 @@ mixin header(active_menu)
                         span.question_icon ?
                         
                 li.user_m_item
-                    .user_m_link.drop_down_holder
+                    .user_m_link.drop_down_holder.no_text_selection
                         span.fw_300.mb EN
-                        span.icon_chevron-down.menu_drop_icon.mb
+                        span.menu_drop_icon.mb
                         div.drop_down_wrapper.drop_down_center
                             ul.personal_menu.text_center
                                 li.personal_m_item: a.personal_m_link(href='#') EN
@@ -84,10 +83,10 @@ mixin header(active_menu)
                                 li.personal_m_item: a.personal_m_link(href='#') РУ
                                     
                 li.user_m_item
-                    .user_m_link.drop_down_holder
+                    .user_m_link.drop_down_holder.no_text_selection
                         span.mb.user_avatar
                             span.icon_profile
-                        span.icon_chevron-down.menu_drop_icon.mb
+                        span.menu_drop_icon.mb
                         div.drop_down_wrapper.drop_down_right
                             ul.personal_menu.wide_menu
                                 li.personal_m_item

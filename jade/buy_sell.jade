@@ -10,10 +10,158 @@ html(lang='ru')
                 +header(1)
                 
                 div.main_content
-                    ul.tab_switcher.text_center
-                        li.tab_item.active  Balance
-                        li.tab_item  Lending
-                        li.tab_item  Investment
+                    .section_inner
+                        
+                        .text_center.gl_caption.page_caption.clr_black.fw_300.fz_24 Indicate the currency pair you wish to exchange
+                        
+                        .text_center: .gl_table_w.buy_sell_options_table_w.text_center
+                            table.buy_sell_options_table.gl_table.table_v2
+                                tr
+                                    td.col_1
+                                        .form_row.form_row_v1
+                                            .form_el
+                                                label.f_label.fz_18(for='send_val') I send:
+                                    td.col_2
+                                        .form_row.form_row_v1
+                                            .form_cell.form_cell_group
+                                                .form_el.f_el_w153
+                                                    input#send_val.input_v2.f_input.text_right(value='12344')
+                                                    
+                                                .form_el.f_el_w230
+                                                    .select_box.selectBox.select_box_v2.disabled_
+                                                        .selectVal.select_val
+                                                            span.currency_sum 1.23445679
+                                                            span.currency_label 
+                                                                span.fw_400 EUR 
+                                                                span  (Euros)
+                                                        ul.selectDropDown.select_drop_down
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label
+                                                                    span.fw_400 USD 
+                                                                    span  (US Dollars)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 RUR 
+                                                                    span  (Roubles)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 BTC 
+                                                                    span  (Bitcoins)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 LTC 
+                                                                    span  (Litecoins)
+                                        .exchange_tip
+                                            p.clr_red Not enough funds:  -123456789 RUR
+                                            p   
+                                                span.clr_gray Please 
+                                                a.gl_link.clr_blue.fw_400(href='#') refill your balance
+                                                
+                                tr
+                                    td.col_1
+                                        .form_row.form_row_v1
+                                            .form_el
+                                                label.f_label.fz_18(for='receive_val') I receive:
+                                    td.col_2
+                                        .form_row.form_row_v1
+                                            .form_cell.form_cell_group
+                                                .form_el.f_el_w153
+                                                    input#receive_val.input_v2.f_input.text_right(value='12344')
+                                                    
+                                                .form_el.f_el_w230
+                                                    .select_box.selectBox.select_box_v2.disabled_
+                                                        .selectVal.select_val
+                                                            span.currency_sum 1.23445679
+                                                            span.currency_label 
+                                                                span.fw_400 EUR 
+                                                                span  (Euros)
+                                                        ul.selectDropDown.select_drop_down
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label
+                                                                    span.fw_400 USD 
+                                                                    span  (US Dollars)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 RUR 
+                                                                    span  (Roubles)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 BTC 
+                                                                    span  (Bitcoins)
+                                                            li.selectItem.select_item
+                                                                span.currency_sum 1.23445679
+                                                                span.currency_label 
+                                                                    span.fw_400 LTC 
+                                                                    span  (Litecoins)
+                                        .exchange_tip
+                                            p.fz_14
+                                                span.clr_gray The new balance will be: ~ 
+                                                span.clr_black 123456789 RUR
+
+                                tr
+                                    td.col_1 &nbsp;
+                                        
+                                    td.col_2
+                                        .best_exchange_w: .best_exchange
+                                            p
+                                                span.clr_gray Best exchange rate: 
+                                                span  1386 USD ~ 1BTC 
+                                       
+                                        .form_row.form_row_v1
+                                            .form_cell.form_cell_group
+                                                .form_el.f_el_w270
+                                                    button.btn_v1.blue_btn.exchange_btn.fz_16.fw_300 Exchange
+                                            
+
+                        .table_holder
+                            .table_caption_block
+                                h3.table_caption Buy/Sell History 
+                                ul.filter_options
+                                    li.active: a.t_control_link(href='#') 10
+                                    li: a.t_control_link(href='#') 25
+                                    li: a.t_control_link(href='#') 50
+
+                            .gl_table_w.buy_sell_history_table_w
+                                table.gl_table.buy_sell_history_table.table_v1
+                                    thead
+                                        tr
+                                            th.col_1: span.t_t Date/Time
+                                            th.col_2: span.t_t Currency sent
+                                            th.col_3: span.t_t Currency received
+                                            th.col_4: span.t_t Amount
+                                            th.col_5: span.t_t Price
+                                            th.col_6: span.t_t Total
+
+                                    tbody
+                                        +loop_while(10)
+                                            tr
+                                                td.col_1: span.t_t 11.07 12:30
+                                                td.col_2: span.t_t RUB
+                                                td.col_3: span.t_t USD
+                                                td.col_4: span.t_t 89.3051234
+                                                td.col_5: span.t_t 1.93051234
+                                                td.col_6: span.t_t 389.051234
+                                                
+                                                
+                                                
+
+
+                            .table_caption_block
+                                .filter_options
+                                    a.t_pagination_link.t_pag_prev(href='#') Prev
+                                    a.t_pagination_link.t_pag_next(href='#') Next
+
+
+
+
+
 
 
             +footer()

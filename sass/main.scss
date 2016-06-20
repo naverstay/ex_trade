@@ -16,6 +16,10 @@ a {
   @include transition_all(color .3s, background .3s, border .3s);
 }
 
+label {
+  @extend %no_text_selection;
+}
+
 .hide {
   display: none !important;
 }
@@ -215,6 +219,7 @@ a {
   overflow: hidden;
   line-height: 15px;
   text-align: center;
+  cursor: pointer;
 }
 
 .pair_spiner {
@@ -265,7 +270,7 @@ a {
     color: #818181;
     background: #c9ced6;
   }
-  
+
   .pair_item.active &,
   .pair_item:active & {
     color: #fff;
@@ -340,7 +345,38 @@ a {
   padding-left: 20px;
 }
 
+.exchange_tip {
+  padding: 12px 5px;
+  min-height: 67px;
+  
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.best_exchange_w {
+  min-height: 82px;
+  padding-bottom: 10px;
+}
+
+.best_exchange {
+  border-radius: 3px;
+  text-align: center;
+  background: #fafafa;
+  padding: 5px 25px 5px 5px;
+  line-height: 18px;
+  letter-spacing: .5px;
+
+}
+
 // **********  text
+
+.gl_caption {
+
+  &.page_caption {
+    margin: 38px 0 65px;
+  }
+}
 
 .text_center {
   text-align: center;
@@ -360,6 +396,10 @@ a {
 
 .fw_300 {
   font-weight: 300;
+}
+
+.fw_400 {
+  font-weight: 400;
 }
 
 .fw_500 {
@@ -386,8 +426,20 @@ a {
   font-size: 16px;
 }
 
+.fz_18 {
+  font-size: 18px;
+}
+
+.fz_24 {
+  font-size: 24px;
+}
+
 .clr_blue {
   color: #2b8af1;
+}
+
+.clr_black {
+  color: #353940;
 }
 
 .clr_red {

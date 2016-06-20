@@ -1,6 +1,12 @@
 //************  buttons
 
 .gl_link {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &.rm_link {
     @extend .icon_before;
@@ -14,7 +20,6 @@
       font-size: 10px;
     }
   }
-
 }
 
 .btn_v1 {
@@ -32,6 +37,17 @@
     cursor: pointer;
     border-radius: 4px;
     padding: 8px 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &.exchange_btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 20px;
+    line-height: 20px;
     text-align: center;
   }
 
