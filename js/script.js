@@ -4,15 +4,19 @@ $(function ($) {
 
     $body = $('body');
 
-    $body.delegate('.selectBox', 'click', function () {
+    $body.delegate('.selectBox', 'mouseenter', function () {
 
         var firedEl = $(this);
 
         if (firedEl.closest('.selectBox').hasClass('disabled')) return false;
 
-        firedEl.toggleClass('opened');
+        firedEl.addClass('opened');
 
-        return false;
+    }).delegate('.selectBox', 'mouseleave', function () {
+
+        var firedEl = $(this);
+
+        firedEl.removeClass('opened');
 
     }).delegate('.selectItem', 'click', function () {
 
