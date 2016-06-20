@@ -554,11 +554,13 @@ a {
   cursor: pointer;
 }
 .pair_item .gl_link.action_link {
-  display: none;
   position: absolute;
   top: -5px;
   right: -2px;
   color: #ed325b;
+}
+.readonly_mode .pair_item .gl_link.action_link {
+  display: none;
 }
 .pair_item.pair_item_editable .pair_val,
 .pair_item.pair_item_editable .pair_name {

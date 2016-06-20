@@ -222,11 +222,14 @@ label {
   cursor: pointer;
 
   .gl_link.action_link {
-    display: none;
     position: absolute;
     top: -5px;
     right: -2px;
     color: #ed325b;
+
+    .readonly_mode & {
+      display: none;
+    }
   }
 
   &.pair_item_editable {
