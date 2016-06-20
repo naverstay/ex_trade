@@ -130,7 +130,7 @@ label {
 
 .pairs_holder {
   min-height: 60px;
-  padding-bottom: 7px;
+  padding-bottom: 3px;
 }
 
 .main_charts {
@@ -215,11 +215,27 @@ label {
 }
 
 .pair_item {
-  border-radius: 3px;
-  overflow: hidden;
+  @include transition_all(opacity .3s);
+  position: relative;
   line-height: 15px;
   text-align: center;
   cursor: pointer;
+
+  .gl_link.rm_link {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    color: #ed325b;
+  }
+
+  &.pair_item_inactive {
+    opacity: .5;
+
+    .gl_link.rm_link {
+      @include transform_rotate(45);
+      color: #2b8af1;
+    }
+  }
 }
 
 .pair_spiner {
@@ -265,6 +281,7 @@ label {
   background: #c9ced6;
   font-size: 12px;
   padding: 3px;
+  border-radius: 3px 3px 0 0;
 
   .pair_item:hover & {
     color: #818181;
@@ -283,6 +300,7 @@ label {
   font-size: 11px;
   height: 21px;
   padding: 3px;
+  border-radius: 0 0 3px 3px;
 
   .pair_item:hover & {
     color: #818181;
@@ -348,7 +366,7 @@ label {
 .exchange_tip {
   padding: 12px 5px;
   min-height: 67px;
-  
+
   p {
     margin-bottom: 5px;
   }

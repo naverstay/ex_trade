@@ -475,7 +475,7 @@ a {
 
 .pairs_holder {
   min-height: 60px;
-  padding-bottom: 7px;
+  padding-bottom: 3px;
 }
 
 .main_charts {
@@ -545,11 +545,28 @@ a {
 }
 
 .pair_item {
-  border-radius: 3px;
-  overflow: hidden;
+  -webkit-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  position: relative;
   line-height: 15px;
   text-align: center;
   cursor: pointer;
+}
+.pair_item .gl_link.rm_link {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  color: #ed325b;
+}
+.pair_item.pair_item_inactive {
+  opacity: .5;
+}
+.pair_item.pair_item_inactive .gl_link.rm_link {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: #2b8af1;
 }
 
 .pair_spiner {
@@ -590,6 +607,7 @@ a {
   background: #c9ced6;
   font-size: 12px;
   padding: 3px;
+  border-radius: 3px 3px 0 0;
 }
 .pair_item:hover .pair_name {
   color: #818181;
@@ -605,6 +623,7 @@ a {
   font-size: 11px;
   height: 21px;
   padding: 3px;
+  border-radius: 0 0 3px 3px;
 }
 .pair_item:hover .pair_val {
   color: #818181;
