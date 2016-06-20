@@ -222,7 +222,7 @@ label {
   cursor: default;
 
   .readonly_mode & {
-    cursor: default;
+    cursor: pointer;
   }
   
   .gl_link.action_link {

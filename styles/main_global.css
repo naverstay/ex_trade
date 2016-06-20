@@ -554,7 +554,7 @@ a {
   cursor: default;
 }
 .readonly_mode .pair_item {
-  cursor: default;
+  cursor: pointer;
 }
 .pair_item .gl_link.action_link {
   position: absolute;
