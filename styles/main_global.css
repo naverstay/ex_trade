@@ -554,10 +554,14 @@ a {
   cursor: pointer;
 }
 .pair_item .gl_link.rm_link {
+  display: none;
   position: absolute;
   top: -5px;
   right: -2px;
   color: #ed325b;
+}
+.edit_mode .pair_item .gl_link.rm_link {
+  display: block;
 }
 .pair_item.pair_item_inactive {
   opacity: .5;
