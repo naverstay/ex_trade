@@ -221,7 +221,7 @@ label {
   text-align: center;
   cursor: pointer;
 
-  .gl_link.rm_link {
+  .gl_link.action_link {
     display: none;
     position: absolute;
     top: -5px;
@@ -229,18 +229,21 @@ label {
     color: #ed325b;
   }
 
-  .edit_mode & {
-    .gl_link.rm_link {
-      display: block;
-    }
-  }
-  
   &.pair_item_inactive {
+    display: none;
     opacity: .5;
 
-    .gl_link.rm_link {
+    .gl_link.action_link {
       @include transform_rotate(45);
       color: #2b8af1;
+    }
+  }
+
+  .edit_mode & {
+    display: block;
+    
+    .gl_link.action_link {
+      display: block;
     }
   }
 }

@@ -338,7 +338,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_before:after, .external_link:after, .menu_drop_icon:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.rm_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.rm_link:before, .t_control_btn:before, .t_pagination_link:before {
+.icon_before:after, .external_link:after, .menu_drop_icon:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.action_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.action_link:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -553,24 +553,28 @@ a {
   text-align: center;
   cursor: pointer;
 }
-.pair_item .gl_link.rm_link {
+.pair_item .gl_link.action_link {
   display: none;
   position: absolute;
   top: -5px;
   right: -2px;
   color: #ed325b;
 }
-.edit_mode .pair_item .gl_link.rm_link {
-  display: block;
-}
 .pair_item.pair_item_inactive {
+  display: none;
   opacity: .5;
 }
-.pair_item.pair_item_inactive .gl_link.rm_link {
+.pair_item.pair_item_inactive .gl_link.action_link {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   color: #2b8af1;
+}
+.edit_mode .pair_item {
+  display: block;
+}
+.edit_mode .pair_item .gl_link.action_link {
+  display: block;
 }
 
 .pair_spiner {
@@ -1491,13 +1495,13 @@ a.menu_link:hover {
 .gl_link:hover {
   text-decoration: underline;
 }
-.gl_link.rm_link {
+.gl_link.action_link {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   text-decoration: none;
 }
-.gl_link.rm_link:before {
+.gl_link.action_link:before {
   content: "";
   font-size: 10px;
 }
