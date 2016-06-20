@@ -551,13 +551,17 @@ a {
   position: relative;
   line-height: 15px;
   text-align: center;
-  cursor: pointer;
+  cursor: default;
+}
+.readonly_mode .pair_item {
+  cursor: default;
 }
 .pair_item .gl_link.action_link {
   position: absolute;
   top: -5px;
   right: -2px;
   color: #ed325b;
+  z-index: 1;
 }
 .readonly_mode .pair_item .gl_link.action_link {
   display: none;
@@ -578,6 +582,7 @@ a {
 
 .pair_spiner {
   height: 42px;
+  cursor: pointer;
   position: relative;
 }
 .pair_spiner span {

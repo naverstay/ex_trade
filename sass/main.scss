@@ -219,13 +219,18 @@ label {
   position: relative;
   line-height: 15px;
   text-align: center;
-  cursor: pointer;
+  cursor: default;
 
+  .readonly_mode & {
+    cursor: default;
+  }
+  
   .gl_link.action_link {
     position: absolute;
     top: -5px;
     right: -2px;
     color: #ed325b;
+    z-index: 1;
 
     .readonly_mode & {
       display: none;
@@ -252,6 +257,7 @@ label {
 
 .pair_spiner {
   height: 42px;
+  cursor: pointer;
   position: relative;
 
   span {
