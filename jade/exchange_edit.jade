@@ -11,10 +11,10 @@ html(lang='ru')
                 
                 div.main_content
                     .section_inner
-                        .pairs_holder.edit_mode
+                        .pairs_holder.readonly_mode
                             ul.pairs_list
                                 li
-                                    .pair_item
+                                    .pair_item.active
                                         a.gl_link.action_link(href='#')
                                         .pair_name BTC/USD
                                         .pair_val.clr_blue: span 445.06
@@ -74,24 +74,24 @@ html(lang='ru')
 
                                 +loop_while(2)
                                     li
-                                        .pair_item.pair_item_inactive
+                                        .pair_item.pair_item_editable
                                             a.gl_link.action_link(href='#')
                                             .pair_name LTC/BTC
                                             .pair_val: span 0.00747486
                                     li
-                                        .pair_item.pair_item_inactive
+                                        .pair_item.pair_item_editable
                                             a.gl_link.action_link(href='#')
                                             .pair_name LTC/RUB
                                             .pair_val: span 211.94
     
                                     li
-                                        .pair_item.pair_item_inactive
+                                        .pair_item.pair_item_editable
                                             a.gl_link.action_link(href='#')
                                             .pair_name USD/RUB
                                             .pair_val: span 63.97
                                             
                                     li
-                                        .pair_item.pair_item_inactive
+                                        .pair_item.pair_item_editable
                                             a.gl_link.action_link(href='#')
                                             .pair_name USD/RUB
                                             .pair_val: span 63.97
