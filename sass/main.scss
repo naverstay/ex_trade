@@ -405,6 +405,16 @@ label {
   }
 }
 
+.receive_tip {
+  padding: 23px 0 5px;
+  min-height: 67px;
+  margin-left: -3px;
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
 .best_exchange_w {
   min-height: 82px;
   padding-bottom: 10px;
@@ -491,6 +501,10 @@ label {
 
 .clr_black {
   color: #353940;
+}
+
+.clr_black_2 {
+  color: #1a1a1a;
 }
 
 .clr_red {
