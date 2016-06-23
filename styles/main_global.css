@@ -467,6 +467,9 @@ a {
   padding-top: 12px;
   padding-bottom: 100px;
 }
+.table_holder.table_holder_v1 {
+  padding-top: 30px;
+}
 
 .external_link {
   text-decoration: none;
@@ -1543,6 +1546,7 @@ a.menu_link:hover {
   padding: 8px 20px;
   line-height: 20px;
   text-align: center;
+  letter-spacing: -.5px;
 }
 
 .green_btn {
@@ -1840,6 +1844,7 @@ a.menu_link:hover {
 }
 .table_caption_block .filter_options {
   float: right;
+  padding-top: 5px;
 }
 
 .table_caption {
