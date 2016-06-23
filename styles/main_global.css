@@ -917,12 +917,18 @@ a {
 }
 
 .user_m_link {
+  -webkit-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 5px;
   font-size: 13px;
   line-height: 1;
   color: #fefdf4;
+}
+.user_m_link:hover {
+  color: #c9ced6;
 }
 
 a.user_m_link {
@@ -1072,6 +1078,9 @@ a.menu_link:hover {
 }
 
 .account_estate {
+  -webkit-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
   font-size: 13px;
   padding-right: 25px;
   position: relative;
@@ -1084,6 +1093,9 @@ a.menu_link:hover {
   line-height: 20px;
   margin-top: -12px;
   font-size: 10px;
+}
+.account_estate:hover {
+  color: #c9ced6;
 }
 
 .drop_down_holder {

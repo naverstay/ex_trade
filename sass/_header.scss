@@ -49,12 +49,17 @@
 }
 
 .user_m_link {
+  @include transition_all(color .3s);
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 5px;
   font-size: 13px;
   line-height: 1;
   color: #fefdf4;
+
+  &:hover {
+    color: #c9ced6;
+  }
 }
 
 a.user_m_link {
@@ -148,7 +153,7 @@ a.user_m_link {
   font-size: 11px;
   position: absolute;
   cursor: pointer;
-  
+
   &:before {
     content: $icon_cancel;
     color: #818181;
@@ -219,6 +224,7 @@ a.menu_link {
 }
 
 .account_estate {
+  @include transition_all(color .3s);
   font-size: 13px;
   padding-right: 25px;
   position: relative;
@@ -233,6 +239,10 @@ a.menu_link {
     line-height: 20px;
     margin-top: -12px;
     font-size: 10px;
+  }
+
+  &:hover {
+    color: #c9ced6;
   }
 }
 
