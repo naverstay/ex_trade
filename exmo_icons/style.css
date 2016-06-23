@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'exmo_icons';
-    src:    url('fonts/exmo_icons.eot?qch4h0');
-    src:    url('fonts/exmo_icons.eot?qch4h0#iefix') format('embedded-opentype'),
-        url('fonts/exmo_icons.ttf?qch4h0') format('truetype'),
-        url('fonts/exmo_icons.woff?qch4h0') format('woff'),
-        url('fonts/exmo_icons.svg?qch4h0#exmo_icons') format('svg');
+    src:    url('fonts/exmo_icons.eot?4pmyty');
+    src:    url('fonts/exmo_icons.eot?4pmyty#iefix') format('embedded-opentype'),
+        url('fonts/exmo_icons.ttf?4pmyty') format('truetype'),
+        url('fonts/exmo_icons.woff?4pmyty') format('woff'),
+        url('fonts/exmo_icons.svg?4pmyty#exmo_icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -84,8 +84,14 @@
 .icon_facebook:before {
     content: "\e903";
 }
+.icon_cancel:before {
+    content: "\e918";
+}
 .icon_checkmark:before {
     content: "\e902";
+}
+.icon_cross:before {
+    content: "\e919";
 }
 .icon_lock-open:before {
     content: "\e916";

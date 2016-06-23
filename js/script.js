@@ -18,6 +18,13 @@ $(function ($) {
 
         firedEl.removeClass('opened');
 
+    }).delegate('.questionBtn', 'click', function (e) {
+        if ($(e.target).hasClass('questionBtn')) $(this).toggleClass('opened');
+
+    }).delegate('.closeAnswer', 'click', function () {
+        $(this).closest('.questionBtn').removeClass('opened');
+        return false;
+
     }).delegate('.selectItem', 'click', function () {
 
         var firedEl = $(this);

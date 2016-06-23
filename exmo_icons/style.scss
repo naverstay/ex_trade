@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'exmo_icons';
-  src: url('#{$icomoon-font-path}/exmo_icons.eot?qch4h0');
-  src: url('#{$icomoon-font-path}/exmo_icons.eot?qch4h0#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/exmo_icons.ttf?qch4h0') format('truetype'),
-  url('#{$icomoon-font-path}/exmo_icons.woff?qch4h0') format('woff'),
-  url('#{$icomoon-font-path}/exmo_icons.svg?qch4h0#exmo_icons') format('svg');
+  src: url('#{$icomoon-font-path}/exmo_icons.eot?4pmyty');
+  src: url('#{$icomoon-font-path}/exmo_icons.eot?4pmyty#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/exmo_icons.ttf?4pmyty') format('truetype'),
+  url('#{$icomoon-font-path}/exmo_icons.woff?4pmyty') format('woff'),
+  url('#{$icomoon-font-path}/exmo_icons.svg?4pmyty#exmo_icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,6 @@
 [class^="icon_"], [class*=" icon_"] {
   &:after,
   &:before {
-
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'exmo_icons' !important;
     speak: none;
@@ -150,9 +149,21 @@
   }
 }
 
+.icon_cancel {
+  &:before {
+    content: $icon_cancel;
+  }
+}
+
 .icon_checkmark {
   &:before {
     content: $icon_checkmark;
+  }
+}
+
+.icon_cross {
+  &:before {
+    content: $icon_cross;
   }
 }
 

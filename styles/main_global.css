@@ -203,8 +203,8 @@ textarea:focus::-moz-placeholder {
 /*-----------------------------form elements###*/
 @font-face {
   font-family: 'exmo_icons';
-  src: url("../fonts/exmo_icons.eot?qch4h0");
-  src: url("../fonts/exmo_icons.eot?qch4h0#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?qch4h0") format("truetype"), url("../fonts/exmo_icons.woff?qch4h0") format("woff"), url("../fonts/exmo_icons.svg?qch4h0#exmo_icons") format("svg");
+  src: url("../fonts/exmo_icons.eot?4pmyty");
+  src: url("../fonts/exmo_icons.eot?4pmyty#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?4pmyty") format("truetype"), url("../fonts/exmo_icons.woff?4pmyty") format("woff"), url("../fonts/exmo_icons.svg?4pmyty#exmo_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -302,8 +302,16 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
+.icon_cancel:before {
+  content: "";
+}
+
 .icon_checkmark:before {
   content: "";
+}
+
+.icon_cross:before {
+  content: "";
 }
 
 .icon_lock-open:before {
@@ -338,7 +346,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_before:after, .external_link:after, .menu_drop_icon:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.action_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.action_link:before, .t_control_btn:before, .t_pagination_link:before {
+.icon_before:after, .external_link:after, .menu_drop_icon:after, .answer_close:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.action_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .answer_close:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.action_link:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -565,8 +573,8 @@ a {
 }
 .pair_item .gl_link.action_link {
   position: absolute;
-  top: -5px;
-  right: -2px;
+  top: -8px;
+  right: -3px;
   color: #ed325b;
   z-index: 1;
 }
@@ -655,7 +663,6 @@ a {
 .order_forms {
   background: #fff;
   border-radius: 3px;
-  overflow: hidden;
   height: 365px;
   position: relative;
 }
@@ -933,6 +940,7 @@ a.user_m_link {
 }
 
 .question_icon {
+  position: relative;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -956,6 +964,50 @@ a.user_m_link {
 .question_icon.question_icon_blue.opened, .question_icon.question_icon_blue:active {
   color: #405d88;
   border-color: #405d88;
+}
+
+.question_answer {
+  z-index: 2;
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: 18px;
+  width: 180px;
+  margin-left: -83px;
+  border-radius: 4px;
+  background: #c9ced6;
+  font-size: 12px;
+  padding: 19px 12px;
+  text-align: left;
+  min-height: 80px;
+  color: #1a1a1a;
+}
+.question_answer:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-left: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #c9ced6;
+}
+.question_answer span {
+  display: block;
+}
+.opened .question_answer {
+  display: block;
+}
+
+.answer_close {
+  top: 7px;
+  right: 8px;
+  font-size: 11px;
+  position: absolute;
+}
+.answer_close:before {
+  content: "";
+  color: #818181;
 }
 
 .user_avatar {
@@ -1530,7 +1582,7 @@ a.menu_link:hover {
   text-decoration: none;
 }
 .gl_link.action_link:before {
-  content: "";
+  content: "";
   font-size: 10px;
 }
 
