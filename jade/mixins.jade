@@ -70,7 +70,10 @@ mixin header(active_menu)
                 li.user_m_item
                     a.user_m_link(href='#')
                         span.fw_300.mb Support
-                        span.question_icon ?
+                        span.question_icon.questionBtn ?
+                            span.question_answer
+                                span.answer_close.closeAnswer
+                                span Some text
                         
                 li.user_m_item
                     .user_m_link.drop_down_holder.no_text_selection

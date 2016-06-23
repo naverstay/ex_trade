@@ -968,6 +968,7 @@ a.user_m_link {
 
 .question_answer {
   z-index: 2;
+  cursor: default;
   display: none;
   position: absolute;
   top: 100%;
@@ -1004,6 +1005,7 @@ a.user_m_link {
   right: 8px;
   font-size: 11px;
   position: absolute;
+  cursor: pointer;
 }
 .answer_close:before {
   content: "";
