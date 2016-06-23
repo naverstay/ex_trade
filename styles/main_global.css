@@ -364,6 +364,10 @@ body {
   font: 14px/1.2 'Roboto', sans-serif;
   color: #1a1a1a;
   background: #e9eaed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
 }
 
 a {

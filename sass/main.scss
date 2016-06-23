@@ -10,6 +10,10 @@ body {
   font: 14px/1.2 'Roboto', sans-serif;
   color: $default_t_color;
   background: #e9eaed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
 }
 
 a {
@@ -495,5 +499,4 @@ label {
 .clr_gray_2 {
   color: #3f444b;
 }
-
 
