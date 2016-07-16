@@ -90,9 +90,75 @@ html(lang='ru')
                                         li: a.t_control_link(href='#') 1d
                                 .chart_holder.chart_v1
                                     
-                            .col.col_s_400: .chart_w
+                            .col.col_s_400
+                                .chart_w
+                                    .chart_controls
+                                        .chart_caption
+                                            span.fw_300 Online: 
+                                            |  12345
+                                            
+                                        .filter_options
+                                            button.adv_trade_btn.btn_v2.blue_btn.fz_16 Advanced trading
+
+
                                 .chart_holder.chart_v1
-                                    
+                                    .chat_block
+                                        ul.chat_list
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span like
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user2: 
+                                                    span user1 I like English please what are you talking about?
+
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span user2 is a rich doge
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user3: 
+                                                    span Hi
+
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span hi user
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user2: 
+                                                    span How is the market doing for u . so far?
+
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_red Admin: 
+                                                    span I want to know about this site. 
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user3: 
+                                                    span where you from?
+
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_red user1: 
+                                                    span irdosi send ur facebook address we can talk real time
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_blue user4: 
+                                                    span hi all !
+
+                                            li
+                                                .chat_msg
+                                                    span.chat_u_name.clr_gray user1: 
+                                                    span hi user
+                                        .chat_form
+                                            form(action='#')
+                                                .chat_input
+                                                    input.clr_gray.f_input.input_v1.fw_300.fz_13(placeholder='Message Text')
+                                                    .chat_button.icon_lock-open
+                                                        
                         .row
                             .col.col_s_600
                                 .chart_w
@@ -100,6 +166,7 @@ html(lang='ru')
                                         ul.tab_switcher.tabSwitcher(data-tab-context='#order_tab_list')
                                             li.tabItem.tab_item.active Limit Order
                                             li.tabItem.tab_item Instant Order
+                                            
                                     #order_tab_list
                                         .tabUnit
                                             .order_forms
@@ -286,73 +353,42 @@ html(lang='ru')
                                                                     span.clr_gray USD
                                                                 
                                                         .form_footer
-                                                            button.order_btn.btn_v1.blue_btn.fz_16() Sell BTC
+                                                            button.order_btn.btn_v1.blue_btn.fz_16() Sell BTC 
 
                             .col.col_s_400
                                 .chart_w
                                     .chart_controls
-                                        .table_caption 
-                                            span.fw_300 Online: 
-                                            |  12345
+                                        .table_caption My Orders
+                                    .gl_table_w.my_orders_table_w
+                                        table.gl_table.my_orders_table.table_v1
+                                            thead
+                                                tr
+                                                    th.col_1: span.t_t Time
+                                                    th.col_2: span.t_t Type
+                                                    th.col_3: span.t_t Price
+                                                    th.col_4: span.t_t Amount
+                                                    th.col_5: span.t_t Value
+                                                    th.col_6: span.t_t Del
 
-                                .order_forms
-                                    .chat_block
-                                        ul.chat_list
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_gray user1: 
-                                                    span like
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_gray user2: 
-                                                    span user1 I like English please what are you talking about?
-                                                    
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_gray user1: 
-                                                    span user2 is a rich doge
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_blue user3: 
-                                                    span Hi
-                                                    
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_gray user1: 
-                                                    span hi user
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_blue user2: 
-                                                    span How is the market doing for u . so far?
+                                            tbody
+                                                +loop_while(6)
+                                                    tr
+                                                        td.col_1: span.t_t 11.07 12:30
+                                                        td.col_2: span.t_t.clr_blue.fw_500 Buy
+                                                        td.col_3: span.t_t 89.3051234
+                                                        td.col_4: span.t_t 1.93051234
+                                                        td.col_5: span.t_t 389.051234
+                                                        td.col_6: span.t_t
+                                                            a.gl_link.action_link.clr_red(href='#')
 
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_red Admin: 
-                                                    span I want to know about this site. 
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_blue user3: 
-                                                    span where you from?
-                                                    
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_red user1: 
-                                                    span irdosi send ur facebook address we can talk real time
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_blue user4: 
-                                                    span hi all !
-                                                    
-                                            li 
-                                                .chat_msg
-                                                    span.chat_u_name.clr_gray user1: 
-                                                    span hi user
-                                        .chat_form
-                                            form(action='#')
-                                                .chat_input
-                                                    input.clr_gray.f_input.input_v1.fw_300.fz_13(placeholder='Message Text')
-                                                    .chat_button.icon_lock-open
-
+                                                    tr
+                                                        td.col_1: span.t_t 09.07 17:30
+                                                        td.col_2: span.t_t.clr_red.fw_500 Sell
+                                                        td.col_3: span.t_t 34.929
+                                                        td.col_4: span.t_t 4.46929
+                                                        td.col_5: span.t_t 389.051234
+                                                        td.col_6: span.t_t
+                                                            a.gl_link.action_link.clr_red(href='#')
 
                         .row
                             .col.col_s_600

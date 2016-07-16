@@ -34,6 +34,10 @@
     border-radius: 2px;
   }
 
+  &.my_orders_table_w {
+    border-radius: 2px;
+  }
+
   &.buy_sell_history_table_w {
     border-radius: 2px;
   }
@@ -165,6 +169,43 @@
 
     .col_6 {
       width: 150px;
+    }
+  }
+
+  &.my_orders_table {
+
+    th {
+      padding: 8px 2px;
+    }
+    
+    td {
+      padding: 5px 2px;
+    }
+
+    .col_1 {
+      width: 65px;
+      padding-left: 11px;
+    }
+
+    .col_2 {
+      width: 30px;
+    }
+
+    .col_3 {
+      width: 75px;
+    }
+
+    .col_4 {
+      width: 70px;
+    }
+
+    .col_5 {
+      width: 70px;
+    }
+
+    .col_6 {
+      width: 28px;
+      text-align: center;
     }
   }
 

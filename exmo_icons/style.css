@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'exmo_icons';
-    src:    url('fonts/exmo_icons.eot?4pmyty');
-    src:    url('fonts/exmo_icons.eot?4pmyty#iefix') format('embedded-opentype'),
-        url('fonts/exmo_icons.ttf?4pmyty') format('truetype'),
-        url('fonts/exmo_icons.woff?4pmyty') format('woff'),
-        url('fonts/exmo_icons.svg?4pmyty#exmo_icons') format('svg');
+    src:    url('fonts/exmo_icons.eot?mza9yl');
+    src:    url('fonts/exmo_icons.eot?mza9yl#iefix') format('embedded-opentype'),
+        url('fonts/exmo_icons.ttf?mza9yl') format('truetype'),
+        url('fonts/exmo_icons.woff?mza9yl') format('woff'),
+        url('fonts/exmo_icons.svg?mza9yl#exmo_icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_trade_candels:before {
+    content: "\e91a";
+}
 .icon_bfm:before {
     content: "\42";
 }

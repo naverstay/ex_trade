@@ -1727,6 +1727,20 @@ a.menu_link:hover {
   letter-spacing: -.5px;
 }
 
+.btn_v2 {
+  height: 28px;
+}
+.btn_v2.adv_trade_btn {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 20px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -.5px;
+}
+
 .green_btn {
   color: #fff;
 }
@@ -1773,6 +1787,9 @@ a.menu_link:hover {
   border-radius: 2px;
 }
 .gl_table_w.trade_history_table_w {
+  border-radius: 2px;
+}
+.gl_table_w.my_orders_table_w {
   border-radius: 2px;
 }
 .gl_table_w.buy_sell_history_table_w {
@@ -1872,6 +1889,32 @@ a.menu_link:hover {
 }
 .gl_table.buy_sell_history_table .col_6 {
   width: 150px;
+}
+.gl_table.my_orders_table th {
+  padding: 8px 2px;
+}
+.gl_table.my_orders_table td {
+  padding: 5px 2px;
+}
+.gl_table.my_orders_table .col_1 {
+  width: 65px;
+  padding-left: 11px;
+}
+.gl_table.my_orders_table .col_2 {
+  width: 30px;
+}
+.gl_table.my_orders_table .col_3 {
+  width: 75px;
+}
+.gl_table.my_orders_table .col_4 {
+  width: 70px;
+}
+.gl_table.my_orders_table .col_5 {
+  width: 70px;
+}
+.gl_table.my_orders_table .col_6 {
+  width: 28px;
+  text-align: center;
 }
 .gl_table.sell_orders_table td {
   padding-top: 5px;

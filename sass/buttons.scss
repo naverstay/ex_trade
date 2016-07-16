@@ -54,6 +54,22 @@
 
 }
 
+.btn_v2 {
+  height: 28px;
+
+  &.adv_trade_btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px 20px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -.5px;
+  }
+
+}
+
 .green_btn {
   color: #fff;
 }
