@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table_settings_block:after, .table_settings_item:after, .main_charts:after, .row:after, .chart_controls:after, .pairs_list:after, .glass_holder:after, .form_row:after, .form_cell.form_cell_group:after, .select_box_v2 .select_item:after, .check_emul.check_v2 .check_text:after, .table_caption_block:after, .footer_info:after {
+.table_settings_block:after, .table_settings_item:after, .main_charts:after, .row:after, .chart_controls:after, .pairs_list:after, .glass_holder:after, .form_row:after, .form_cell.form_cell_group:after, .select_box_v2 .select_item:after, .check_emul.check_v2 .check_text:after, .table_caption_block:after, .table_tooltip_list:after, .footer_info:after {
   position: static;
   display: block;
   height: 0;
@@ -203,12 +203,12 @@ textarea:focus::-moz-placeholder {
 /*-----------------------------form elements###*/
 @font-face {
   font-family: 'exmo_icons';
-  src: url("../fonts/exmo_icons.eot?4pmyty");
-  src: url("../fonts/exmo_icons.eot?4pmyty#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?4pmyty") format("truetype"), url("../fonts/exmo_icons.woff?4pmyty") format("woff"), url("../fonts/exmo_icons.svg?4pmyty#exmo_icons") format("svg");
+  src: url("../fonts/exmo_icons.eot?mza9yl");
+  src: url("../fonts/exmo_icons.eot?mza9yl#iefix") format("embedded-opentype"), url("../fonts/exmo_icons.ttf?mza9yl") format("truetype"), url("../fonts/exmo_icons.woff?mza9yl") format("woff"), url("../fonts/exmo_icons.svg?mza9yl#exmo_icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon_"]:after, [class^="icon_"]:before, [class*=" icon_"]:after, [class*=" icon_"]:before {
+[class^="icon_"], [class*=" icon_"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -220,6 +220,10 @@ textarea:focus::-moz-placeholder {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_trade_candels:before {
+  content: "";
 }
 
 .icon_bfm:before {
@@ -346,7 +350,7 @@ textarea:focus::-moz-placeholder {
   content: "";
 }
 
-.icon_before:after, .external_link:after, .menu_drop_icon:after, .answer_close:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.action_link:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .answer_close:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.action_link:before, .t_control_btn:before, .t_pagination_link:before {
+.icon_before:after, .external_link:after, .menu_drop_icon:after, .answer_close:after, .account_estate:after, .export_icon:after, .log_out_icon:after, .adv_trading_icon:after, .select_box_v1 .select_val:after, .select_box_v2 .select_val:after, .check_emul.check_v1 .check_text:after, .gl_link.action_link:after, .btn_v2.adv_trade_btn:after, .t_control_btn:after, .t_pagination_link:after, .icon_before:before, .external_link:before, .menu_drop_icon:before, .answer_close:before, .account_estate:before, .export_icon:before, .log_out_icon:before, .adv_trading_icon:before, .select_box_v1 .select_val:before, .select_box_v2 .select_val:before, .check_emul.check_v1 .check_text:before, .gl_link.action_link:before, .btn_v2.adv_trade_btn:before, .t_control_btn:before, .t_pagination_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'exmo_icons' !important;
   speak: none;
@@ -446,7 +450,7 @@ a {
   cursor: pointer;
   display: inline-block;
   vertical-align: top;
-  padding: 5px 18px;
+  padding: 5px 11px;
   border-bottom: 2px solid transparent;
   color: #1a1a1a;
   font-size: 18px;
@@ -562,7 +566,7 @@ li:first-child > .table_settings_item:before {
 .col {
   float: left;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 }
 .col.col_s_600 {
   width: 600px;
@@ -593,7 +597,7 @@ li:first-child > .table_settings_item:before {
 
 .chart_caption {
   font-size: 13px;
-  padding-left: 11px;
+  padding-left: 16px;
   letter-spacing: .2px;
 }
 
@@ -711,7 +715,7 @@ li:first-child > .table_settings_item:before {
 .order_forms {
   background: #fff;
   border-radius: 3px;
-  height: 365px;
+  height: 350px;
   position: relative;
 }
 .order_forms:before {
@@ -727,7 +731,7 @@ li:first-child > .table_settings_item:before {
 .form_col {
   float: left;
   width: 50%;
-  padding: 15px 0 50px 16px;
+  padding: 9px 0 50px 9px;
   height: 100%;
   position: relative;
 }
@@ -735,15 +739,16 @@ li:first-child > .table_settings_item:before {
 .chat_block {
   position: relative;
   height: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 }
 
 .instant_group {
   -webkit-transition: background 0.3s, border-color 0.3s;
   -ms-transition: background 0.3s, border-color 0.3s;
   transition: background 0.3s, border-color 0.3s;
-  padding: 1px 1px 1px 14px;
+  padding: 1px 1px 1px 7px;
   margin: -1px 0 27px -16px;
+  margin: -1px 0 27px -9px;
   border-left: 2px solid transparent;
 }
 .instant_group.active, .instant_group:hover {
@@ -897,7 +902,7 @@ li:first-child > .table_settings_item:before {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 1px 9px 15px;
+  padding: 1px 9px 9px;
 }
 
 .chat_input {
@@ -1580,7 +1585,6 @@ a.menu_link:hover {
 .form_caption {
   color: #3f444b;
   font-size: 17px;
-  padding-bottom: 6px;
 }
 
 .form_currency {
@@ -1593,7 +1597,7 @@ a.menu_link:hover {
   bottom: 0;
   right: 0;
   left: 0;
-  padding: 0 12px 15px;
+  padding: 0 12px 10px;
 }
 
 .hidden_inp {
@@ -1735,10 +1739,21 @@ a.menu_link:hover {
   width: 100%;
   cursor: pointer;
   border-radius: 4px;
-  padding: 4px 20px;
+  padding: 4px 20px 4px 10px;
   line-height: 20px;
   text-align: center;
+  font-size: 13px;
   letter-spacing: -.5px;
+  margin-top: -3px;
+  text-decoration: none;
+}
+.btn_v2.adv_trade_btn:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  height: 22px;
+  margin-right: 9px;
+  content: "";
 }
 
 .green_btn {
@@ -1785,6 +1800,7 @@ a.menu_link:hover {
 }
 .gl_table_w.orders_deals_table_w {
   border-radius: 2px;
+  margin-bottom: 115px;
 }
 .gl_table_w.trade_history_table_w {
   border-radius: 2px;
@@ -1843,23 +1859,23 @@ a.menu_link:hover {
   padding-top: 5px;
 }
 .gl_table.orders_deals_table .col_1 {
-  width: 110px;
-  padding-left: 27px;
+  width: 93px;
+  padding-left: 10px;
 }
 .gl_table.orders_deals_table .col_2 {
-  width: 95px;
+  width: 100px;
 }
 .gl_table.orders_deals_table .col_3 {
-  width: 65px;
+  width: 75px;
 }
 .gl_table.orders_deals_table .col_4 {
-  width: 143px;
+  width: 130px;
 }
 .gl_table.orders_deals_table .col_5 {
-  width: 153px;
+  width: 140px;
 }
 .gl_table.orders_deals_table .col_6 {
-  width: 122px;
+  width: 140px;
 }
 .gl_table.orders_deals_table .col_7 {
   width: 94px;
@@ -1890,11 +1906,17 @@ a.menu_link:hover {
 .gl_table.buy_sell_history_table .col_6 {
   width: 150px;
 }
+.gl_table.my_orders_table {
+  min-height: 350px;
+}
 .gl_table.my_orders_table th {
   padding: 8px 2px;
 }
 .gl_table.my_orders_table td {
-  padding: 5px 2px;
+  padding: 4px 2px;
+}
+.gl_table.my_orders_table tr:first-child td {
+  padding-top: 10px;
 }
 .gl_table.my_orders_table .col_1 {
   width: 65px;
@@ -1918,6 +1940,12 @@ a.menu_link:hover {
 }
 .gl_table.sell_orders_table td {
   padding-top: 5px;
+}
+.gl_table.sell_orders_table .footer_row .col_1 {
+  padding-left: 15px;
+}
+.gl_table.sell_orders_table .footer_row .col_3 {
+  padding-right: 25px;
 }
 .gl_table.trade_history_table th {
   font-weight: 500;
@@ -2019,6 +2047,10 @@ a.menu_link:hover {
   padding-right: 27px;
   width: 317px;
 }
+.gl_table .table_tooltip_row td {
+  padding: 0 !important;
+  border: none !important;
+}
 
 .t_control_btn {
   position: relative;
@@ -2072,8 +2104,9 @@ a.menu_link:hover {
   font-size: 18px;
   line-height: 30px;
   color: #1a1a1a;
-  padding-left: 20px;
+  padding-left: 8px;
   font-weight: 400;
+  letter-spacing: .5px;
 }
 .chart_controls .table_caption {
   margin-top: -8px;
@@ -2166,6 +2199,38 @@ a.menu_link:hover {
 }
 .t_pagination_link.disabled:before {
   color: #c9ced6;
+}
+
+.table_tooltip_holder {
+  position: relative;
+  height: 0;
+}
+
+.table_tooltip {
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: rgba(57, 87, 132, 0.7);
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.table_tooltip_list {
+  font-size: 12px;
+}
+.table_tooltip_list dd,
+.table_tooltip_list dt {
+  float: left;
+  margin-bottom: 3px;
+}
+.table_tooltip_list dt {
+  clear: both;
+  width: 38px;
+  color: #ffdfe5;
+}
+.table_tooltip_list dd {
+  color: #fff;
+  min-width: 67px;
 }
 
 .footer {

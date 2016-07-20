@@ -98,7 +98,7 @@ html(lang='ru')
                                             |  12345
                                             
                                         .filter_options
-                                            button.adv_trade_btn.btn_v2.blue_btn.fz_16 Advanced trading
+                                            a.adv_trade_btn.btn_v2.blue_btn.fz_16(href='#') Advanced trading
 
 
                                 .chart_holder.chart_v1
@@ -228,7 +228,7 @@ html(lang='ru')
                                                             
                                                 .form_col.form_row_v1
                                                     form(action='#')
-                                                        .form_caption Buy
+                                                        .form_caption Sell
                                                         .form_row
                                                             .form_el.f_el_w125.fl
                                                                 label.clr_gray.fw_300.fz_14(for='sell_amount') Amount
@@ -406,15 +406,31 @@ html(lang='ru')
                                                             th.col_3: span.t_t USD
 
                                                     tbody
-                                                        +loop_while(15)
+                                                        tr
+                                                            td.col_1: span.t_t 89.3051234
+                                                            td.col_2: span.t_t 1.93051234
+                                                            td.col_3: span.t_t 389.051234
+                                                        tr.table_tooltip_row
+                                                            td(colspan=3)
+                                                                .table_tooltip_holder
+                                                                    .table_tooltip
+                                                                        dl.table_tooltip_list
+                                                                            dt BTC: 
+                                                                            dd 123456789
+                                                                            dt USD: 
+                                                                            dd 123456789
+                                                                            dt Avr: 
+                                                                            dd 987.654321
+                                                                        
+                                                        +loop_while(14)
                                                             tr
                                                                 td.col_1: span.t_t 89.3051234
                                                                 td.col_2: span.t_t 1.93051234
                                                                 td.col_3: span.t_t 389.051234
                                                                 
                                                         tr.footer_row
-                                                            td.col_1: span.t_t.clr_gray Volume 
-                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2 389.051234
+                                                            td.col_1: span.t_t.clr_gray.fw_500 Volume 
+                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2.fw_500 1234567.89 BTC
                                                     
                                     .glass_unit
                                         .chart_w
@@ -436,11 +452,9 @@ html(lang='ru')
                                                                 td.col_3: span.t_t 389.051234
                                                                 
                                                         tr.footer_row
-                                                            td.col_1: span.t_t.clr_gray Volume 
-                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2 389.051234
-                                                                
-                                                                
-
+                                                            td.col_1: span.t_t.clr_gray.fw_500 Volume 
+                                                            td.col_3.text_right(colspan='2'): span.t_t.clr_gray_2.fw_500 1234567.89 BTC
+                                                            
                             .col.col_s_400
                                 .chart_w
                                     .chart_controls
@@ -473,7 +487,7 @@ html(lang='ru')
                                                         
                         .row: .col
                             .table_caption_block.table_caption_b_v2
-                                h3.table_caption My Orders & Deals  
+                                h3.table_caption My Deals
                                 ul.filter_options
                                     li.active: a.t_control_link(href='#') 10
                                     li: a.t_control_link(href='#') 25
@@ -490,37 +504,35 @@ html(lang='ru')
                                             th.col_4: span.t_t Amount
                                             th.col_5: span.t_t Price
                                             th.col_6: span.t_t Total
-                                            th.col_7: span.t_t Status
-                                            th.col_8: span.t_t
+                                            //th.col_7: span.t_t Status
+                                            //th.col_8: span.t_t
                                                 a.gl_link.clr_red(href='#') Delete all
 
                                     tbody
-                                        +loop_while(10)
+                                        +loop_while(5)
                                             tr
                                                 td.col_1: span.t_t 24557484
-                                                td.col_2: span.t_t 11.07 12:30
-                                                td.col_3: span.t_t.clr_blue Buy
-                                                td.col_4: span.t_t 89.3051234
-                                                td.col_5: span.t_t.clr_gray_2 1.93051234
-                                                td.col_6: span.t_t 389.051234
-                                                td.col_7: span.t_t.clr_blue.fw_400 Active
-                                                td.col_8: span.t_t
-                                                    a.gl_link.action_link.clr_red(href='#') 
-                                                    
-                                        +loop_while(15)
-                                            tr
-                                                td.col_1: span.t_t.clr_gray 24557484
                                                 td.col_2: span.t_t.clr_gray 11.07 12:30
                                                 td.col_3: span.t_t.clr_blue Buy
-                                                td.col_4: span.t_t.clr_gray 89.3051234
-                                                td.col_5: span.t_t.clr_gray_2 1.93051234
-                                                td.col_6: span.t_t.clr_gray 389.051234
-                                                td.col_7: span.t_t.clr_gray Deal
-                                                td.col_8: span.t_t
+                                                td.col_4: span.t_t 89.3051234
+                                                td.col_5: span.t_t 1.93051234
+                                                td.col_6: span.t_t 389.051234
+                                                //td.col_7: span.t_t.clr_blue.fw_400 Active
+                                                //td.col_8: span.t_t
+                                                    a.gl_link.action_link.clr_red(href='#') 
                                                     
+                                            tr
+                                                td.col_1: span.t_t 24557484
+                                                td.col_2: span.t_t.clr_gray 11.07 12:30
+                                                td.col_3: span.t_t.clr_red Sell
+                                                td.col_4: span.t_t 89.3051234
+                                                td.col_5: span.t_t 1.93051234
+                                                td.col_6: span.t_t 389.051234
+                                                //td.col_7: span.t_t.clr_gray Deal
+                                                //td.col_8: span.t_t
                                                     
 
-                            .table_caption_block
+                            //-.table_caption_block
                                 .filter_options
                                     a.t_pagination_link.t_pag_prev(href='#') Prev
                                     a.t_pagination_link.t_pag_next(href='#') Next

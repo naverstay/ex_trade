@@ -28,6 +28,7 @@
 
   &.orders_deals_table_w {
     border-radius: 2px;
+    margin-bottom: 115px;
   }
 
   &.trade_history_table_w {
@@ -106,28 +107,28 @@
     }
 
     .col_1 {
-      width: 110px;
-      padding-left: 27px;
+      width: 93px;
+      padding-left: 10px;
     }
 
     .col_2 {
-      width: 95px;
+      width: 100px;
     }
 
     .col_3 {
-      width: 65px;
+      width: 75px;
     }
 
     .col_4 {
-      width: 143px;
+      width: 130px;
     }
 
     .col_5 {
-      width: 153px;
+      width: 140px;
     }
 
     .col_6 {
-      width: 122px;
+      width: 140px;
     }
 
     .col_7 {
@@ -173,13 +174,20 @@
   }
 
   &.my_orders_table {
+    min-height: 350px;
 
     th {
       padding: 8px 2px;
     }
-    
+
     td {
-      padding: 5px 2px;
+      padding: 4px 2px;
+    }
+
+    tr:first-child {
+      td {
+        padding-top: 10px;
+      }
     }
 
     .col_1 {
@@ -214,6 +222,17 @@
     td {
       padding-top: 5px;
     }
+
+    .footer_row {
+      .col_1 {
+        padding-left: 15px;
+      }
+
+      .col_3 {
+        padding-right: 25px;
+      }
+    }
+
   }
 
   &.trade_history_table {
@@ -398,6 +417,14 @@
       width: 317px;
     }
   }
+
+  .table_tooltip_row {
+    td {
+      padding: 0 !important;
+      border: none !important;
+    }
+  }
+
 }
 
 .t_control_btn {
@@ -463,8 +490,9 @@
   font-size: 18px;
   line-height: 30px;
   color: #1a1a1a;
-  padding-left: 20px;
+  padding-left: 8px;
   font-weight: 400;
+  letter-spacing: .5px;
 
   .chart_controls & {
     margin-top: -8px;
@@ -582,6 +610,43 @@
       color: #c9ced6;
     }
 
+  }
+
+}
+
+.table_tooltip_holder {
+  position: relative;
+  height: 0;
+}
+
+.table_tooltip {
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: rgba(57, 87, 132, .7);
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.table_tooltip_list {
+  @extend %clearfix;
+  font-size: 12px;
+
+  dd,
+  dt {
+    float: left;
+    margin-bottom: 3px;
+  }
+
+  dt {
+    clear: both;
+    width: 38px;
+    color: #ffdfe5;
+  }
+
+  dd {
+    color: #fff;
+    min-width: 67px;
   }
 
 }

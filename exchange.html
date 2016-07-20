@@ -219,9 +219,7 @@
                 <div class="chart_w">
                   <div class="chart_controls">
                     <div class="chart_caption"><span class="fw_300">Online: </span> 12345</div>
-                    <div class="filter_options">
-                      <button class="adv_trade_btn btn_v2 blue_btn fz_16">Advanced trading</button>
-                    </div>
+                    <div class="filter_options"><a href="#" class="adv_trade_btn btn_v2 blue_btn fz_16">Advanced trading</a></div>
                   </div>
                 </div>
                 <div class="chart_holder chart_v1">
@@ -347,7 +345,7 @@
                         </div>
                         <div class="form_col form_row_v1">
                           <form action="#">
-                            <div class="form_caption">Buy</div>
+                            <div class="form_caption">Sell</div>
                             <div class="form_row">
                               <div class="form_el f_el_w125 fl">
                                 <label for="sell_amount" class="clr_gray fw_300 fz_14">Amount</label>
@@ -646,6 +644,22 @@
                               <td class="col_2"><span class="t_t">1.93051234</span></td>
                               <td class="col_3"><span class="t_t">389.051234</span></td>
                             </tr>
+                            <tr class="table_tooltip_row">
+                              <td colspan="3">
+                                <div class="table_tooltip_holder">
+                                  <div class="table_tooltip">
+                                    <dl class="table_tooltip_list">
+                                      <dt>BTC: </dt>
+                                      <dd>123456789</dd>
+                                      <dt>USD: </dt>
+                                      <dd>123456789</dd>
+                                      <dt>Avr: </dt>
+                                      <dd>987.654321</dd>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
                             <tr>
                               <td class="col_1"><span class="t_t">89.3051234</span></td>
                               <td class="col_2"><span class="t_t">1.93051234</span></td>
@@ -717,8 +731,8 @@
                               <td class="col_3"><span class="t_t">389.051234</span></td>
                             </tr>
                             <tr class="footer_row">
-                              <td class="col_1"><span class="t_t clr_gray">Volume </span></td>
-                              <td colspan="2" class="col_3 text_right"><span class="t_t clr_gray_2">389.051234</span></td>
+                              <td class="col_1"><span class="t_t clr_gray fw_500">Volume </span></td>
+                              <td colspan="2" class="col_3 text_right"><span class="t_t clr_gray_2 fw_500">1234567.89 BTC</span></td>
                             </tr>
                           </tbody>
                         </table>
@@ -816,8 +830,8 @@
                               <td class="col_3"><span class="t_t">389.051234</span></td>
                             </tr>
                             <tr class="footer_row">
-                              <td class="col_1"><span class="t_t clr_gray">Volume </span></td>
-                              <td colspan="2" class="col_3 text_right"><span class="t_t clr_gray_2">389.051234</span></td>
+                              <td class="col_1"><span class="t_t clr_gray fw_500">Volume </span></td>
+                              <td colspan="2" class="col_3 text_right"><span class="t_t clr_gray_2 fw_500">1234567.89 BTC</span></td>
                             </tr>
                           </tbody>
                         </table>
@@ -964,7 +978,7 @@
             <div class="row">
               <div class="col">
                 <div class="table_caption_block table_caption_b_v2">
-                  <h3 class="table_caption">My Orders & Deals  </h3>
+                  <h3 class="table_caption">My Deals</h3>
                   <ul class="filter_options">
                     <li class="active"><a href="#" class="t_control_link">10</a></li>
                     <li><a href="#" class="t_control_link">25</a></li>
@@ -981,266 +995,136 @@
                         <th class="col_4"><span class="t_t">Amount</span></th>
                         <th class="col_5"><span class="t_t">Price</span></th>
                         <th class="col_6"><span class="t_t">Total</span></th>
-                        <th class="col_7"><span class="t_t">Status</span></th>
-                        <th class="col_8"><span class="t_t"><a href="#" class="gl_link clr_red">Delete all</a></span></th>
+                        <!--th.col_7: span.t_t Status-->
+                        <!--th.col_8: span.t_t
+                        a.gl_link.clr_red(href='#') Delete all
+                        
+                        -->
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
                         <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_blue.fw_400 Active-->
+                        <!--td.col_8: span.t_t
+                        a.gl_link.action_link.clr_red(href='#') 
+                        
+                        -->
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
+                        <td class="col_3"><span class="t_t clr_red">Sell</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_gray Deal-->
+                        <!--td.col_8: span.t_t-->
+                        
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
                         <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_blue.fw_400 Active-->
+                        <!--td.col_8: span.t_t
+                        a.gl_link.action_link.clr_red(href='#') 
+                        
+                        -->
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
+                        <td class="col_3"><span class="t_t clr_red">Sell</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_gray Deal-->
+                        <!--td.col_8: span.t_t-->
+                        
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
                         <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_blue.fw_400 Active-->
+                        <!--td.col_8: span.t_t
+                        a.gl_link.action_link.clr_red(href='#') 
+                        
+                        -->
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
+                        <td class="col_3"><span class="t_t clr_red">Sell</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_gray Deal-->
+                        <!--td.col_8: span.t_t-->
+                        
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
                         <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_blue.fw_400 Active-->
+                        <!--td.col_8: span.t_t
+                        a.gl_link.action_link.clr_red(href='#') 
+                        
+                        -->
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
+                        <td class="col_3"><span class="t_t clr_red">Sell</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_gray Deal-->
+                        <!--td.col_8: span.t_t-->
+                        
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
                         <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
+                        <!--td.col_7: span.t_t.clr_blue.fw_400 Active-->
+                        <!--td.col_8: span.t_t
+                        a.gl_link.action_link.clr_red(href='#') 
+                        
+                        -->
                       </tr>
                       <tr>
                         <td class="col_1"><span class="t_t">24557484</span></td>
-                        <td class="col_2"><span class="t_t">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
+                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
+                        <td class="col_3"><span class="t_t clr_red">Sell</span></td>
                         <td class="col_4"><span class="t_t">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
+                        <td class="col_5"><span class="t_t">1.93051234</span></td>
                         <td class="col_6"><span class="t_t">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_blue fw_400">Active</span></td>
-                        <td class="col_8"><span class="t_t"><a href="#" class="gl_link action_link clr_red"> </a></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><span class="t_t clr_gray">24557484</span></td>
-                        <td class="col_2"><span class="t_t clr_gray">11.07 12:30</span></td>
-                        <td class="col_3"><span class="t_t clr_blue">Buy</span></td>
-                        <td class="col_4"><span class="t_t clr_gray">89.3051234</span></td>
-                        <td class="col_5"><span class="t_t clr_gray_2">1.93051234</span></td>
-                        <td class="col_6"><span class="t_t clr_gray">389.051234</span></td>
-                        <td class="col_7"><span class="t_t clr_gray">Deal</span></td>
-                        <td class="col_8"><span class="t_t"></span></td>
+                        <!--td.col_7: span.t_t.clr_gray Deal-->
+                        <!--td.col_8: span.t_t-->
+                        
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div class="table_caption_block">
-                  <div class="filter_options"><a href="#" class="t_pagination_link t_pag_prev">Prev</a><a href="#" class="t_pagination_link t_pag_next">Next</a></div>
                 </div>
               </div>
             </div>
